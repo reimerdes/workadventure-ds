@@ -1,4 +1,4 @@
-# WorkAdventure Map Starter Kit
+# WorkAdventure Map Start DS-HQ
 
 ![map](./map.png)
 
