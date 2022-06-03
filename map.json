@@ -6304,12 +6304,12 @@
                         {
                          "name":"autoClose",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"autoOpen",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"code_",
@@ -6939,12 +6939,12 @@
                         {
                          "name":"autoClose",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"autoOpen",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"code_",
@@ -7576,12 +7576,12 @@
                         {
                          "name":"autoClose",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"autoOpen",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"code_",
@@ -8213,12 +8213,12 @@
                         {
                          "name":"autoClose",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"autoOpen",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"code_",
