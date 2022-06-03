@@ -268,7 +268,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"map.json#Nuernberg"
+                 "value":"#Nuernberg"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -405,7 +405,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"map.json#NorthOfBridge"
+                 "value":"#NorthOfBridge"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -542,7 +542,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"map.json#SouthOfBridge"
+                 "value":"#SouthOfBridge"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1090,7 +1090,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"map.json#start"
+                 "value":"#start"
                 }],
          "type":"tilelayer",
          "visible":true,
