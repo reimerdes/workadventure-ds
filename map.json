@@ -4786,7 +4786,12 @@
                 {
                  "name":"jitsiConfig",
                  "type":"string",
-                 "value":"{\n disableAudioLevels: true,\n disableAP: true,\n enableNoisyMicDetection: false, \n resolution: 1080,\n desktopSharingFrameRate: {  \n     min: 1,  \n     max: 2  \n },\n constraints: {  \n     video: {  \n         height: {  \n             ideal: 720,  \n             max: 1080,  \n             min: 360  \n         }  \n     }  \n },  \n videoQuality: {  \n    preferredCodec: 'VP9',  \n    maxBitratesVideo: {  \n          H264: {  \n              low: 600000,  \n              standard: 1500000,  \n              high: 4500000  \n          },  \n          VP8 : {  \n              low: 600000,  \n              standard: 1000000,  \n              high: 4500000  \n          },  \n          VP9: {  \n              low: 300000,  \n              standard: 900000,  \n              high: 3600000  \n          }  \n    },\n    minHeightForQualityLvl: {  \n        360: 'low',  \n        720: 'standard',  \n        1080: 'high'  \n    }\n  }\n}  "
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"preferVP9\": true, \"preferredCodec\": \"VP9\"}"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
                 }, 
                 {
                  "name":"jitsiRoom",
