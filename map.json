@@ -4786,7 +4786,7 @@
                 {
                  "name":"jitsiConfig",
                  "type":"string",
-                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"preferVP9\": true, \"preferredCodec\": \"VP9\"}"
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}}"
                 }, 
                 {
                  "name":"jitsiInterfaceConfig",
