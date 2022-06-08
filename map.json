@@ -4856,7 +4856,7 @@
                 {
                  "name":"jitsiConfig",
                  "type":"string",
-                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                 "value":"{ \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\", maxBitratesVideo: { \"H264\": { \"low\": 600000, \"standard\": 1500000, \"high\": 4500000 }, \"VP8\" : { \"low\": 600000, \"standard\": 1000000, \"high\": 4500000 }, \"VP9\": { \"low\": 300000, \"standard\": 900000, \"high\": 3600000 }}, \"minHeightForQualityLvl\": { 360: \"low\", 720: \"standard\", 1080: \"high\"}}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
                 }, 
                 {
                  "name":"jitsiInterfaceConfig",
