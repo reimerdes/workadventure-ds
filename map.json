@@ -3755,6 +3755,16 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
+                {
                  "name":"jitsiRoom",
                  "type":"string",
                  "value":"NuernbergRoom1"
@@ -3901,6 +3911,16 @@
          "name":"jitsiNuernberg2",
          "opacity":1,
          "properties":[
+                {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
                 {
                  "name":"jitsiRoom",
                  "type":"string",
@@ -4049,6 +4069,16 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
+                {
                  "name":"jitsiRoom",
                  "type":"string",
                  "value":"NeubauStammtisch"
@@ -4195,6 +4225,16 @@
          "name":"jitsiCrewLaunge",
          "opacity":1,
          "properties":[
+                {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
                 {
                  "name":"jitsiRoom",
                  "type":"string",
@@ -4343,6 +4383,16 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
+                {
                  "name":"jitsiRoom",
                  "type":"string",
                  "value":"Fittness"
@@ -4490,6 +4540,16 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
+                {
                  "name":"jitsiRoom",
                  "type":"string",
                  "value":"LandhausEbene1Schiff"
@@ -4636,6 +4696,16 @@
          "name":"jitsiConferenceRoom",
          "opacity":1,
          "properties":[
+                {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
                 {
                  "name":"jitsiRoom",
                  "type":"string",
@@ -4941,6 +5011,16 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
+                {
                  "name":"jitsiRoom",
                  "type":"string",
                  "value":"LandhausEbene1Room2"
@@ -5087,6 +5167,16 @@
          "name":"jitsiL13",
          "opacity":1,
          "properties":[
+                {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
                 {
                  "name":"jitsiRoom",
                  "type":"string",
@@ -5235,6 +5325,16 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
+                {
                  "name":"jitsiRoom",
                  "type":"string",
                  "value":"LandhausEbene1Room4"
@@ -5381,6 +5481,16 @@
          "name":"jitsiL15",
          "opacity":1,
          "properties":[
+                {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
                 {
                  "name":"jitsiRoom",
                  "type":"string",
@@ -5529,6 +5639,16 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
+                {
                  "name":"jitsiRoom",
                  "type":"string",
                  "value":"NeubauEbene1Room1"
@@ -5675,6 +5795,16 @@
          "name":"jitsiNB12",
          "opacity":1,
          "properties":[
+                {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
                 {
                  "name":"jitsiRoom",
                  "type":"string",
@@ -5823,6 +5953,16 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
+                {
                  "name":"jitsiRoom",
                  "type":"string",
                  "value":"NeubauEbene1Room3"
@@ -5969,6 +6109,16 @@
          "name":"jitsiNB14",
          "opacity":1,
          "properties":[
+                {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
                 {
                  "name":"jitsiRoom",
                  "type":"string",
@@ -6117,6 +6267,16 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
+                {
                  "name":"jitsiRoom",
                  "type":"string",
                  "value":"NeubauEbene1Room5"
@@ -6263,6 +6423,16 @@
          "name":"jitsiNB16",
          "opacity":1,
          "properties":[
+                {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
                 {
                  "name":"jitsiRoom",
                  "type":"string",
@@ -6411,6 +6581,16 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
+                {
                  "name":"jitsiRoom",
                  "type":"string",
                  "value":"NeubauEbene1Room7"
@@ -6558,6 +6738,16 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
+                {
                  "name":"jitsiRoom",
                  "type":"string",
                  "value":"NeubauEbene1Room8"
@@ -6704,6 +6894,16 @@
          "name":"jitsiNB112",
          "opacity":1,
          "properties":[
+                {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{ \"startWithAudioMuted\": true, \"desktopSharingFrameRate\": { \"min\": 1, \"max\": 2 }, \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\"}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                }, 
+                {
+                 "name":"jitsiInterfaceConfig",
+                 "type":"string",
+                 "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
+                }, 
                 {
                  "name":"jitsiRoom",
                  "type":"string",
