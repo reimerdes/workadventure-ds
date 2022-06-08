@@ -4784,6 +4784,11 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"jitsiConfig",
+                 "type":"string",
+                 "value":"{\n resolution: 1080,  \n constraints: {  \n     video: {  \n         height: {  \n             ideal: 720,  \n             max: 1080,  \n             min: 360  \n         }  \n     }  \n },  \n videoQuality: {  \n    preferredCodec: 'VP9',  \n    maxBitratesVideo: {  \n          H264: {  \n              low: 600000,  \n              standard: 1500000,  \n              high: 4500000  \n          },  \n          VP8 : {  \n              low: 600000,  \n              standard: 1000000,  \n              high: 4500000  \n          },  \n          VP9: {  \n              low: 300000,  \n              standard: 900000,  \n              high: 3600000  \n          }  \n    },  \n    minHeightForQualityLvl: {  \n        360: 'low',  \n        720: 'standard',  \n        1080: 'high'  \n    },  \n}\n}  "
+                }, 
+                {
                  "name":"jitsiRoom",
                  "type":"string",
                  "value":"LandhausEbene1Room1"
