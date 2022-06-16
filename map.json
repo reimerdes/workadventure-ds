@@ -4699,7 +4699,7 @@
                 {
                  "name":"jitsiConfig",
                  "type":"string",
-                 "value":"{ \"p2p\": { \"enabled\": true, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\", \"maxBitratesVideo\": { \"H264\": { \"low\": 600000, \"standard\": 1500000, \"high\": 4500000 }, \"VP8\" : { \"low\": 600000, \"standard\": 1000000, \"high\": 4500000 }, \"VP9\": { \"low\": 300000, \"standard\": 900000, \"high\": 3600000 } }}, \"disableSimulcast\": true, \"enableLayerSuspension\": false, \"disableRtx\": true, \"enableTcc\": true }"
+                 "value":"{ \"p2p\": { \"enabled\": false, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\", \"maxBitratesVideo\": { \"low\": 100000, \"standard\": 250000, \"high\": 750000, \"H264\": { \"low\": 100000, \"standard\": 250000, \"high\": 750000 }, \"VP8\" : { \"low\": 100000, \"standard\": 250000, \"high\": 750000 }, \"VP9\": { \"low\": 100000, \"standard\": 250000, \"high\": 750000 } }}, \"disableSimulcast\": true, \"enableLayerSuspension\": true, \"disableRtx\": true, \"enableTcc\": true }"
                 }, 
                 {
                  "name":"jitsiInterfaceConfig",
