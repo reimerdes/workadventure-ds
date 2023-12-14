@@ -58,6 +58,17 @@ WA.onInit().then(() => {
         }
     });
 
+    WA.ui.actionBar.addButton({
+        id: 'pause-btn',
+        // @ts-ignore
+        type: 'action',
+        imageSrc: 'https://github.com/othaldo/workadventure-ds/blob/master/src/assets/ds/pause.png?raw=true',
+        toolTip: 'Move to Pause Area',
+        callback: () => {
+            WA.player.moveTo(1901, 806, 8)
+        }
+    });
+
     // Open & Close popupPrivateOffice
     WA.room.area.onEnter("popupPrivateOffice_area").subscribe(() => {
         if(popupPrivateOffice) return;
