@@ -4983,7 +4983,7 @@
                  "y":1056
                 }, 
                 {
-                 "height":96,
+                 "height":118,
                  "id":55,
                  "name":"zoneMeetingRoom",
                  "properties":[
@@ -5015,7 +5015,7 @@
                  "y":672
                 }, 
                 {
-                 "height":96,
+                 "height":119,
                  "id":56,
                  "name":"zoneEntryLeft",
                  "properties":[
@@ -5047,7 +5047,7 @@
                  "y":1055
                 }, 
                 {
-                 "height":96,
+                 "height":118,
                  "id":57,
                  "name":"zoneEntryRight",
                  "properties":[
@@ -5079,7 +5079,7 @@
                  "y":1056
                 }, 
                 {
-                 "height":96,
+                 "height":118,
                  "id":58,
                  "name":"zoneShip",
                  "properties":[
@@ -6617,7 +6617,7 @@
          "value":false
         }],
  "renderorder":"right-down",
- "tiledversion":"1.10.2",
+ "tiledversion":"git",
  "tileheight":32,
  "tilesets":[
         {
