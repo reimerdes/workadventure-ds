@@ -693,7 +693,7 @@
                 {
                  "name":"jitsiRoom",
                  "type":"string",
-                 "value":"LandhausEbene1Conference"
+                 "value":"ConferenceRoom"
                 }, 
                 {
                  "name":"jitsiTrigger",
@@ -845,7 +845,7 @@
                 {
                  "name":"jitsiRoom",
                  "type":"string",
-                 "value":"LandhausEbene1ConferenceA"
+                 "value":"ConferenceA"
                 }, 
                 {
                  "name":"jitsiTrigger",
@@ -997,7 +997,7 @@
                 {
                  "name":"jitsiRoom",
                  "type":"string",
-                 "value":"LandhausEbene1ConferenceB"
+                 "value":"ConferenceB"
                 }, 
                 {
                  "name":"jitsiTrigger",
@@ -1149,7 +1149,7 @@
                 {
                  "name":"jitsiRoom",
                  "type":"string",
-                 "value":"LandhausEbene1ConferenceC"
+                 "value":"ConferenceC"
                 }, 
                 {
                  "name":"jitsiTrigger",
@@ -1301,7 +1301,7 @@
                 {
                  "name":"jitsiRoom",
                  "type":"string",
-                 "value":"LandhausEbene1ConferenceD"
+                 "value":"ConferenceD"
                 }, 
                 {
                  "name":"jitsiTrigger",
