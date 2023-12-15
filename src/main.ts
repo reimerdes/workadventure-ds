@@ -42,11 +42,11 @@ WA.onInit().then(() => {
         imageSrc: 'https://github.com/othaldo/workadventure-ds/blob/master/src/assets/ds/pause.png?raw=true',
         toolTip: 'Move to Pause Area',
         callback: () => {
-            let xStart = 55;
-            let xEnd = 63;
+            let xStart = 37;
+            let xEnd = 45;
 
-            let yStart = 23;
-            let yEnd = 28;
+            let yStart = 19;
+            let yEnd = 24;
 
             let cellSize = 32;
 
