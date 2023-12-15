@@ -17,6 +17,10 @@ let isDoorOpen = false;
     await WA.player.getPosition();
 })();
 
+function getRandomInt(min: number, max: number): number {
+    return Math.ceil(Math.random() * (max - min + 1)) + min;
+}
+
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     const userTag = WA.player.tags;
@@ -38,7 +42,15 @@ WA.onInit().then(() => {
         imageSrc: 'https://github.com/othaldo/workadventure-ds/blob/master/src/assets/ds/pause.png?raw=true',
         toolTip: 'Move to Pause Area',
         callback: () => {
-            WA.player.moveTo(1901, 806, 8);
+            let xStart = 55;
+            let xEnd = 63;
+
+            let yStart = 23;
+            let yEnd = 28;
+
+            let cellSize = 32;
+
+            WA.player.moveTo(getRandomInt(xStart * cellSize, xEnd * cellSize), getRandomInt(yStart * cellSize, yEnd * cellSize), 8);
         }
     });
 
