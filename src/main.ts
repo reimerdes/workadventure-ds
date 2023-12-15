@@ -45,8 +45,8 @@ WA.onInit().then(() => {
             let xStart = 37;
             let xEnd = 45;
 
-            let yStart = 19;
-            let yEnd = 24;
+            let yStart = 22;
+            let yEnd = 27;
 
             let cellSize = 32;
 
