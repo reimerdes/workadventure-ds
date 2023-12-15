@@ -50,7 +50,7 @@ WA.onInit().then(() => {
 
             let cellSize = 32;
 
-            WA.player.moveTo(getRandomInt(xStart * cellSize, xEnd * cellSize), getRandomInt(yStart * cellSize, yEnd * cellSize), 8);
+            WA.player.moveTo(getRandomInt(xStart * cellSize, xEnd * cellSize), getRandomInt(yStart * cellSize, yEnd * cellSize), 16);
         }
     });
 
