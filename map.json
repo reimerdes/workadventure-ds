@@ -3831,7 +3831,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":".\/src\/main.ts"
+         "value":".dist\/src\/main.ts"
         }, 
         {
          "name":"tutorial",
