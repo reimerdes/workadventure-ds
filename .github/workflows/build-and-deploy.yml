@@ -26,13 +26,17 @@ jobs:
       - name: "Build scripts"
         run: npm run build
 
+      - name: "Move scripts"
+        run: mv dist/* .
+
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         if: github.ref == 'refs/heads/master'
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist/ # The folder the action should deploy.
+          FOLDER: . # The folder the action should deploy.
           BASE_BRANCH: master
 
       - name: Bash2
