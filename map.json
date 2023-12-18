@@ -287,6 +287,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -372,6 +377,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -457,6 +467,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -542,6 +557,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -627,6 +647,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -712,6 +737,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -967,6 +997,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -1052,6 +1087,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -1137,6 +1177,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -1222,6 +1267,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -1307,6 +1357,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -1392,6 +1447,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -1477,6 +1537,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -1549,11 +1614,6 @@
                          "value":"{ \"p2p\": { \"enabled\": false, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\", \"maxBitratesVideo\": { \"low\": 100000, \"standard\": 500000, \"high\": 3000000, \"H264\": { \"low\": 100000, \"standard\": 500000, \"high\": 3000000 }, \"VP8\" : { \"low\": 100000, \"standard\": 500000, \"high\": 3000000 }, \"VP9\": { \"low\": 100000, \"standard\": 500000, \"high\": 3000000 } }, \"minHeightForQualityLvl\": { \"360\": \"standard\", \"720\": \"high\" } }, \"disableSimulcast\": true, \"enableLayerSuspension\": true, \"disableRtx\": true, \"enableTcc\": true}"
                         }, 
                         {
-                         "name":"jitsiInterfaceConfig_",
-                         "type":"string",
-                         "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
-                        }, 
-                        {
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"JitsiRoom5"
@@ -1567,6 +1627,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -1652,6 +1717,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -1724,11 +1794,6 @@
                          "value":"{ \"p2p\": { \"enabled\": false, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\n\"preferredCodec\": \"VP9\", \"maxBitratesVideo\": { \"low\": 100000, \"standard\": 500000, \"high\": 3000000, \"H264\": { \"low\": 100000, \"standard\": 500000, \"high\": 3000000 }, \"VP8\" : { \"low\": 100000, \"standard\": 500000, \"high\": 3000000 }, \"VP9\": { \"low\": 100000, \"standard\": 500000, \"high\": 3000000 } }, \"minHeightForQualityLvl\": { \"360\": \"standard\", \"720\": \"high\" } }, \"disableSimulcast\": true, \"enableLayerSuspension\": true, \"disableRtx\": true, \"enableTcc\": true}"
                         }, 
                         {
-                         "name":"jitsiInterfaceConfig_",
-                         "type":"string",
-                         "value":"{\"DISABLE_JOIN_LEAVE_NOTIFICATIONS\":true,\"DISABLE_VIDEO_BACKGROUND\":false,\"HIDE_INVITE_MORE_HEADER\":true,\"SHOW_CHROME_EXTENSION_BANNER\":false,\"SHOW_POWERED_BY\":false,\"TOOLBAR_BUTTONS\":[\"microphone\",\"camera\",\"closedcaptions\",\"desktop\",\"fullscreen\",\"fodeviceselection\",\"hangup\",\"profile\",\"chat\",\"recording\",\"livestreaming\",\"etherpad\",\"sharedvideo\",\"settings\",\"raisehand\",\"videoquality\",\"filmstrip\",\"feedback\",\"stats\",\"shortcuts\",\"tileview\",\"videobackgroundblur\",\"download\",\"help\",\"mute-everyone\"]}"
-                        }, 
-                        {
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"JitsiRoom3"
@@ -1742,6 +1807,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -1827,6 +1897,11 @@
                          "name":"jitsiTriggerMessage",
                          "type":"string",
                          "value":"Press SPACE \/ touch to enter the virtual meeting"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -1902,6 +1977,11 @@
                          "name":"jitsiRoom",
                          "type":"string",
                          "value":"JitsiRoom1"
+                        }, 
+                        {
+                         "name":"jitsiRoomAdminTag",
+                         "type":"string",
+                         "value":"member"
                         }, 
                         {
                          "name":"jitsiTrigger",
