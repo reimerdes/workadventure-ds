@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "outDir": "./",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
