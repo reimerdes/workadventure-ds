@@ -23,17 +23,14 @@ if (process.env.TILESET_OPTIMIZATION && process.env.TILESET_OPTIMIZATION === "tr
 
 export default defineConfig({
     base: "./",
-    // build: {
-    //     rollupOptions: {
-    //         input: {
-    //             index: "./index.html",
-    //             instructions: "./scavenger/instructions.html",
-    //             progress: "./scavenger/progress.html",
-    //             congratulations: "./scavenger/congratulations.html",
-    //             ...getMapsScripts(maps),
-    //         },
-    //     },
-    // },
+    build: {
+        rollupOptions: {
+            input: {
+                index: "./index.html",
+                ...getMapsScripts(maps),
+            },
+        },
+    },
     plugins: [...getMapsOptimizers(maps, optimizerOptions)],
     server: {
         host: "localhost",
