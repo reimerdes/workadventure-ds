@@ -8,6 +8,27 @@ function getRandomInt(min: number, max: number): number {
     return Math.ceil(Math.random() * (max - min + 1)) + min;
 }
 
+// show or hide a specific layer depending on a date range without considering the year
+function showOrHideLayer(layerName: string, startDate: Date, endDate: Date) {
+    let today = new Date();
+
+    if(today >= startDate && today <= endDate) {
+        WA.room.showLayer(layerName);
+    } else {
+        WA.room.hideLayer(layerName);
+    }
+} 
+
+function showOrHideChristmasLayer() {
+    let today = new Date();
+
+    // December 1st (current year) to January 6th (next year)
+    let startDate = new Date(today.getFullYear(), 11, 1);
+    let endDate = new Date(today.getFullYear() + 1, 0, 6);
+
+    showOrHideLayer("Christmas", startDate, endDate);
+}
+
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     const userTag = WA.player.tags;
@@ -23,19 +44,19 @@ WA.onInit().then(() => {
         type: 'action',
         imageSrc: 'https://github.com/othaldo/workadventure-ds/blob/master/src/assets/ds/pause.png?raw=true',
         toolTip: 'Move to Pause Area',
-        callback: () => {
-            let xStart = 37;
-            let xEnd = 45;
+        callback: async () => {
+            const area = await WA.room.area.get("pauseArea");
+            let xStart = area.x;
+            let xEnd = area.x + area.width;
 
-            let yStart = 22;
-            let yEnd = 27;
+            let yStart = area.y;
+            let yEnd = area.y + area.height;
 
-            let cellSize = 32;
-
-            WA.player.moveTo(getRandomInt(xStart * cellSize, xEnd * cellSize), getRandomInt(yStart * cellSize, yEnd * cellSize), 16);
+            WA.player.moveTo(getRandomInt(xStart , xEnd), getRandomInt(yStart , yEnd), 16);
         }
     });
 
+    showOrHideChristmasLayer();
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
