@@ -10,6 +10,10 @@ function getRandomInt(min: number, max: number): number {
     return Math.ceil(Math.random() * (max - min + 1)) + min;
 }
 
+function getDistance(x1: number, y1: number, x2: number, y2: number) {
+    return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+}
+
 // show or hide a specific layer depending on a date range without considering the year
 function showOrHideLayer(layerName: string, startDate: Date, endDate: Date) {
     let today = new Date();
@@ -45,7 +49,7 @@ WA.onInit().then(() => {
         // @ts-ignore
         type: 'action',
         imageSrc: 'https://github.com/othaldo/workadventure-ds/blob/master/src/assets/ds/pause.png?raw=true',
-        toolTip: 'Move to Pause Area',
+        toolTip: 'Teleport to pause area',
         callback: async () => {
             const area = await WA.room.area.get("pauseArea");
             let xStart = area.x;
@@ -57,6 +61,40 @@ WA.onInit().then(() => {
             WA.player.teleport(getRandomInt(xStart , xEnd), getRandomInt(yStart , yEnd));
         }
     });
+
+    WA.ui.actionBar.addButton({
+        id: 'customer-call-btn',
+        // @ts-ignore
+        type: 'action',
+        imageSrc: 'https://github.com/othaldo/workadventure-ds/blob/master/src/assets/ds/call.png?raw=true',
+        toolTip: 'Teleport to in call area',
+        callback: async () => {
+            const customerCallArea1 = await WA.room.area.get("ccArea1");
+        const customerCallArea2 = await WA.room.area.get("ccArea2");
+        const position = await WA.player.getPosition();
+
+        // Berechne die Mittelpunkte der Areas
+        const midPointArea1 = { x: customerCallArea1.x + customerCallArea1.width / 2, y: customerCallArea1.y + customerCallArea1.height / 2 };
+        const midPointArea2 = { x: customerCallArea2.x + customerCallArea2.width / 2, y: customerCallArea2.y + customerCallArea2.height / 2 };
+
+        // Berechne die Distanzen zur aktuellen Position
+        const distanceToArea1 = getDistance(position.x, position.y, midPointArea1.x, midPointArea1.y);
+        const distanceToArea2 = getDistance(position.x, position.y, midPointArea2.x, midPointArea2.y);
+
+        // Bestimme die nächstgelegene Area
+        const nearestArea = distanceToArea1 < distanceToArea2 ? customerCallArea1 : customerCallArea2;
+
+        // Berechne zufällige Position innerhalb der nächstgelegenen Area
+        let xStart = nearestArea.x;
+        let xEnd = nearestArea.x + nearestArea.width - (tileSize / 2);
+        let yStart = nearestArea.y;
+        let yEnd = nearestArea.y + nearestArea.height - (tileSize / 2);
+
+        // Teleportiere den Spieler
+        WA.player.teleport(getRandomInt(xStart , xEnd), getRandomInt(yStart , yEnd));
+        }
+    });
+
 
     showOrHideChristmasLayer();
 

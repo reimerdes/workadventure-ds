@@ -3239,6 +3239,28 @@
                  "width":64,
                  "x":1120,
                  "y":640
+                }, 
+                {
+                 "height":32,
+                 "id":65,
+                 "name":"ccArea2",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":96,
+                 "x":1600,
+                 "y":672
+                }, 
+                {
+                 "height":32,
+                 "id":64,
+                 "name":"ccArea1",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":96,
+                 "x":480,
+                 "y":672
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4089,7 +4111,7 @@
          "y":0
         }],
  "nextlayerid":202,
- "nextobjectid":64,
+ "nextobjectid":66,
  "orientation":"orthogonal",
  "properties":[
         {
