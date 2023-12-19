@@ -52,7 +52,7 @@ WA.onInit().then(() => {
             let yStart = area.y;
             let yEnd = area.y + area.height;
 
-            WA.player.moveTo(getRandomInt(xStart , xEnd), getRandomInt(yStart , yEnd), 16);
+            WA.player.teleport(getRandomInt(xStart , xEnd), getRandomInt(yStart , yEnd));
         }
     });
 
