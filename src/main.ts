@@ -4,6 +4,8 @@ import { bootstrapExtra } from "@workadventure/scripting-api-extra";
     await WA.onInit();
 })();
 
+let tileSize = 32;
+
 function getRandomInt(min: number, max: number): number {
     return Math.ceil(Math.random() * (max - min + 1)) + min;
 }
@@ -47,10 +49,10 @@ WA.onInit().then(() => {
         callback: async () => {
             const area = await WA.room.area.get("pauseArea");
             let xStart = area.x;
-            let xEnd = area.x + area.width;
+            let xEnd = area.x + area.width - (tileSize / 2);
 
             let yStart = area.y;
-            let yEnd = area.y + area.height;
+            let yEnd = area.y + area.height - (tileSize / 2);
 
             WA.player.teleport(getRandomInt(xStart , xEnd), getRandomInt(yStart , yEnd));
         }
