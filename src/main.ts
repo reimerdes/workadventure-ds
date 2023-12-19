@@ -49,7 +49,7 @@ WA.onInit().then(() => {
         // @ts-ignore
         type: 'action',
         imageSrc: 'https://github.com/othaldo/workadventure-ds/blob/master/src/assets/ds/pause.png?raw=true',
-        toolTip: 'Teleport to pause area',
+        toolTip: 'Zum Pausenbereich teleportieren',
         callback: async () => {
             const area = await WA.room.area.get("pauseArea");
             let xStart = area.x;
@@ -67,7 +67,7 @@ WA.onInit().then(() => {
         // @ts-ignore
         type: 'action',
         imageSrc: 'https://github.com/othaldo/workadventure-ds/blob/master/src/assets/ds/call.png?raw=true',
-        toolTip: 'Teleport to in call area',
+        toolTip: 'Zum \'Im Gespräch\'-Bereich teleportieren',
         callback: async () => {
             const customerCallArea1 = await WA.room.area.get("ccArea1");
         const customerCallArea2 = await WA.room.area.get("ccArea2");
