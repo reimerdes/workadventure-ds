@@ -97,7 +97,7 @@ WA.onInit().then(() => {
         // @ts-ignore
         type: 'action',
         imageSrc: 'https://github.com/othaldo/workadventure-ds/blob/master/src/assets/ds/call.png?raw=true',
-        toolTip: 'Zum \'Im Gespräch\'-Bereich teleportieren',
+        toolTip: 'Teleport to call area and back again',
         callback: async () => {
             let x;
             let y;
