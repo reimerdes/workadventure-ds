@@ -3166,15 +3166,15 @@
                  "y":959.440052700922
                 }, 
                 {
-                 "height":190,
+                 "height":192,
                  "id":59,
                  "name":"pauseArea",
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":286,
-                 "x":1185,
-                 "y":705
+                 "width":288,
+                 "x":1184,
+                 "y":704
                 }, 
                 {
                  "height":118,
