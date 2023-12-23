@@ -110,7 +110,7 @@ function addTeleportButton(id: string, imageSrc: string, toolTip: string, positi
 
 function addPauseButton() {
   addTeleportButton('pause-btn',
-    'https://github.com/othaldo/workadventure-ds/blob/master/src/assets/ds/pause.png?raw=true',
+    'https://github.com/reimerdes/workadventure-ds/blob/master/src/assets/ds/pause.png?raw=true',
     'Zum Pausenbereich teleportieren und zurück',
     PositionType.LastPositionBreak,
     async () => await WA.room.area.get("pauseArea"));
@@ -118,7 +118,7 @@ function addPauseButton() {
 
 function addCustomerCallButton() {
   addTeleportButton('customer-call-btn',
-    'https://github.com/othaldo/workadventure-ds/blob/master/src/assets/ds/call.png?raw=true',
+    'https://github.com/reimerdes/workadventure-ds/blob/master/src/assets/ds/call.png?raw=true',
     'Zum \'Im Gespräch\'-Bereich teleportieren und zurück',
     PositionType.LastPositionCall,
     async () => {
