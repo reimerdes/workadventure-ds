@@ -33,7 +33,7 @@ function getDistance(x1: number, y1: number, x2: number, y2: number) {
 // show or hide a specific layer depending on a date range without considering
 // the year
 function showOrHideLayer(layerName: string, startDate: Date, endDate: Date) {
-  let today = new Date();
+  const today = new Date();
 
   if (today >= startDate && today <= endDate) {
     WA.room.showLayer(layerName);
@@ -52,9 +52,16 @@ function clearLastPositions() {
 function showOrHideChristmasLayer() {
   const today = new Date();
 
-  // December 1st (current year) to January 6th (next year)
-  const startDate = new Date(today.getFullYear(), 11, 1);
-  const endDate = new Date(today.getFullYear() + 1, 0, 6);
+  // Bestimmt, ob das heutige Datum im frühen Januar (bis einschließlich 6. Januar) liegt
+  const isEarlyJanuary = today.getMonth() === 0 && today.getDate() <= 6;
+
+  // Wenn wir uns im frühen Januar befinden, verwenden wir den 1. Dezember des Vorjahres,
+  // da der Weihnachtszeitraum im Vorjahr begann.
+  const startDate = new Date(today.getFullYear() - (isEarlyJanuary ? 1 : 0), 11, 1);
+
+  // Das Enddatum ist der 6. Januar: des aktuellen Jahres, wenn wir im frühen Januar sind,
+  // sonst des nächsten Jahres, da der Weihnachtszeitraum bis Anfang Januar reicht.
+  const endDate = new Date(today.getFullYear() + (isEarlyJanuary ? 0 : 1), 0, 6);
 
   showOrHideLayer('Christmas', startDate, endDate);
 }
