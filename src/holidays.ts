@@ -28,7 +28,7 @@ function showOrHideChristmasLayer() {
     showOrHideLayer('Christmas', startDate, endDate);
   }
 
-export class Holydays {
+export class Holidays {
     static init() {
         showOrHideChristmasLayer();
     }

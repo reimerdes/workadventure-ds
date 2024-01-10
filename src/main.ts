@@ -1,5 +1,5 @@
 import { bootstrapExtra } from '@workadventure/scripting-api-extra';
-import { Holydays } from './holydays';
+import { Holidays } from './holidays';
 import { Actions } from './actions';
 
 (async () => {
@@ -17,7 +17,7 @@ WA.onInit()
     }
 
     Actions.registerActions();
-    Holydays.init();
+    Holidays.init();
 
     // The line below bootstraps the Scripting API Extra library that adds a
     // number of advanced properties/features to WorkAdventure
