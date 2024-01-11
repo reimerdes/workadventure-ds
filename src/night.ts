@@ -1,5 +1,5 @@
-//import { parseCronExpression } from "cron-schedule"
-//import { TimerBasedCronScheduler as scheduler } from 'cron-schedule/dist/schedulers/timer-based'
+import { parseCronExpression } from "cron-schedule"
+import { TimerBasedCronScheduler as timerScheduler } from 'cron-schedule/schedulers/timer-based.js'
 
 var nightLayers = ["night", "nightAboveFurniture", "nightBelowFurniture"]
 
@@ -9,33 +9,36 @@ function showNightLayers() {
     });
 }
 
-// function hideNightLayers() {
-//     nightLayers.forEach(element => {
-//         WA.room.hideLayer(element);
-//     });
-// }
+function hideNightLayers() {
+    nightLayers.forEach(element => {
+        WA.room.hideLayer(element);
+    });
+}
 
-// function startScheduler() {
-//     const cronStartNight = parseCronExpression('0 17 * * *');
-//     scheduler.setInterval(cronStartNight, () => {
-//         showNightLayers();
-//     });
-    
-//     const cronStartDay = parseCronExpression('0 8 * * *');
-//     scheduler.setInterval(cronStartDay, () => {
-//         hideNightLayers();
-//     });
-// }
+function showLayer(){
+    const now = new Date();
+    const startNight = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 17, 0, 0);
+    const startDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 8, 0, 0);
+    if (now > startDay && now < startNight) {
+        console.log("start day");
+        hideNightLayers();
+    } else {
+        console.log("start night");
+        showNightLayers();
+    }
+}
+
+function startScheduler() {
+    const cronStartNight = parseCronExpression('* 1 * * * *');
+    timerScheduler.setInterval(cronStartNight, () => {
+        showLayer();
+    }, { errorHandler: (err) => console.log(err) });
+
+}
 
 export class Night {
     static init() {
-        const now = new Date();
-        const startNight = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 17, 0, 0);
-        const startDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 8, 0, 0);
-        if (now > startNight || now < startDay) {
-            showNightLayers();
-        }
-
-        //startScheduler();
+        showLayer();
+        startScheduler();
     }
 }

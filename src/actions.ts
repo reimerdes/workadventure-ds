@@ -1,4 +1,4 @@
-import { Area } from '@workadventure/iframe-api-typings/play/src/front/Api/Iframe/Area/Area';
+import { Area } from '@workadventure/iframe-api-typings/iframe_api.js';
 
 const tileSize = 32;
 

@@ -1,7 +1,7 @@
 import { bootstrapExtra } from '@workadventure/scripting-api-extra';
-import { Holidays } from './holidays';
-import { Actions } from './actions';
-import { Night } from './night';
+import { Holidays } from './holidays.js';
+import { Actions } from './actions.js';
+import { Night } from './night.js';
 
 (async () => {
   await WA.onInit();
