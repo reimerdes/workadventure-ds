@@ -5,8 +5,8 @@ import { getTimes } from 'suncalc'
 var nightLayers = ["night", "nightAboveFurniture", "nightBelowFurniture"]
 
 // Globale Variablen für Startzeiten von Tag und Nacht
-var startDay;
-var startNight;
+var startDay: Date;
+var startNight: Date;
 
 function showNightLayers() {
     nightLayers.forEach(element => {
@@ -33,8 +33,6 @@ function calculateDayAndNight() {
 
 function showLayer(){
     const now = new Date();
-    const startNight = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 17, 0, 0);
-    const startDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 8, 0, 0);
     if (now > startDay && now < startNight) {
         console.log("start day");
         hideNightLayers();
