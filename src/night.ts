@@ -1,7 +1,12 @@
 import { parseCronExpression } from "cron-schedule"
 import { TimerBasedCronScheduler as timerScheduler } from 'cron-schedule/schedulers/timer-based.js'
+import { getTimes } from 'suncalc'
 
 var nightLayers = ["night", "nightAboveFurniture", "nightBelowFurniture"]
+
+// Globale Variablen für Startzeiten von Tag und Nacht
+var startDay;
+var startNight;
 
 function showNightLayers() {
     nightLayers.forEach(element => {
@@ -13,6 +18,17 @@ function hideNightLayers() {
     nightLayers.forEach(element => {
         WA.room.hideLayer(element);
     });
+}
+
+function calculateDayAndNight() {
+    const now = new Date();
+    const sunTimes = getTimes(now, 54.58469000, 10.01785000);
+
+    startDay = sunTimes.sunrise;
+    startNight = sunTimes.sunset;
+
+    console.log('Sonnenaufgang:', startDay);
+    console.log('Sonnenuntergang:', startNight);
 }
 
 function showLayer(){
@@ -38,6 +54,7 @@ function startScheduler() {
 
 export class Night {
     static init() {
+        calculateDayAndNight();
         showLayer();
         startScheduler();
     }

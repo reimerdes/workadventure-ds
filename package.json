@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "@workadventure/scripting-api-extra": "^1.4.8",
-    "cron-schedule": "^4.0.0"
+    "cron-schedule": "^4.0.0",
+    "suncalc": "^1.x.x",
+    "@types/suncalc": "^1.9.0"
   }
 }
