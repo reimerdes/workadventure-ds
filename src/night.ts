@@ -1,5 +1,5 @@
-import { parseCronExpression } from "cron-schedule"
-import { TimerBasedCronScheduler as scheduler } from "cron-schedule/dist/schedulers/timer-based";
+//import { parseCronExpression } from "cron-schedule"
+//import { TimerBasedCronScheduler as scheduler } from 'cron-schedule/dist/schedulers/timer-based'
 
 var nightLayers = ["night", "nightAboveFurniture", "nightBelowFurniture"]
 
@@ -9,23 +9,23 @@ function showNightLayers() {
     });
 }
 
-function hideNightLayers() {
-    nightLayers.forEach(element => {
-        WA.room.hideLayer(element);
-    });
-}
+// function hideNightLayers() {
+//     nightLayers.forEach(element => {
+//         WA.room.hideLayer(element);
+//     });
+// }
 
-function startScheduler() {
-    const cronStartNight = parseCronExpression('0 17 * * *');
-    scheduler.setInterval(cronStartNight, () => {
-        showNightLayers();
-    });
+// function startScheduler() {
+//     const cronStartNight = parseCronExpression('0 17 * * *');
+//     scheduler.setInterval(cronStartNight, () => {
+//         showNightLayers();
+//     });
     
-    const cronStartDay = parseCronExpression('0 8 * * *');
-    scheduler.setInterval(cronStartDay, () => {
-        hideNightLayers();
-    });
-}
+//     const cronStartDay = parseCronExpression('0 8 * * *');
+//     scheduler.setInterval(cronStartDay, () => {
+//         hideNightLayers();
+//     });
+// }
 
 export class Night {
     static init() {
@@ -36,6 +36,6 @@ export class Night {
             showNightLayers();
         }
 
-        startScheduler();
+        //startScheduler();
     }
 }
