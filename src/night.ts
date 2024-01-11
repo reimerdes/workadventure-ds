@@ -1,5 +1,5 @@
 import { parseCronExpression } from "cron-schedule"
-import { TimerBasedCronScheduler as scheduler } from "cron-schedule/schedulers/timer-based.js";
+import { TimerBasedCronScheduler as scheduler } from "cron-schedule/dist/schedulers/timer-based";
 
 var nightLayers = ["night", "nightAboveFurniture", "nightBelowFurniture"]
 
