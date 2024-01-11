@@ -41,8 +41,8 @@ function showLayer(){
 }
 
 function startScheduler() {
-    const cronStartNight = parseCronExpression('0 * * * * *');
-    timerScheduler.setInterval(cronStartNight, () => {
+    const cronNight = parseCronExpression('0 * * * * *');
+    timerScheduler.setInterval(cronNight, () => {
         showLayer();
     }, { errorHandler: (err) => console.log(err) });
 
