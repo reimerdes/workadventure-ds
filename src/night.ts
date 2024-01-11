@@ -34,16 +34,14 @@ function calculateDayAndNight() {
 function showLayer(){
     const now = new Date();
     if (now > startDay && now < startNight) {
-        console.log("start day");
         hideNightLayers();
     } else {
-        console.log("start night");
         showNightLayers();
     }
 }
 
 function startScheduler() {
-    const cronStartNight = parseCronExpression('* 1 * * * *');
+    const cronStartNight = parseCronExpression('0 * * * * *');
     timerScheduler.setInterval(cronStartNight, () => {
         showLayer();
     }, { errorHandler: (err) => console.log(err) });
