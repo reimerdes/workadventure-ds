@@ -4,19 +4,44 @@ import { getTimes, GetTimesResult } from 'suncalc'
 
 var nightLayers = ["night1", "night2", "night3", "nightAboveFurniture", "nightBelowFurniture"]
 
+declare global {
+    interface Date {
+        isBetween(start: Date, end: Date): boolean;
+    }
+}
+Date.prototype.isBetween = function(start: Date, end: Date): boolean {
+    return this >= start && this < end;
+};
+
+declare global {
+    interface Number {
+      isBetween(min: number, max: number): boolean;
+    }
+}
+   
+Number.prototype.isBetween = function(this: number, min: number, max: number): boolean {
+    return this >= min && this <= max;
+};
+
 // Globale Variablen für Startzeiten von Tag und Nacht
 var sunTimes: GetTimesResult;
 var startDay: Date;
 var startNight: Date;
 
 async function showNightLayers() {
+    const opacity = calculateOpacityBasedOnSunPhase();
+    if(opacity === 0){
+        nightLayers.forEach(element => {
+            WA.room.hideLayer(element);
+        });
+        return;
+    }
     nightLayers.forEach(element => {
         WA.room.showLayer(element);
     });
-    const opacity = calculateOpacityBasedOnSunPhase();
-    if(opacity < 0.66 && opacity >= 0.33) {
+    if(opacity.isBetween(0.33, 0.66)) {
         WA.room.hideLayer("night1");
-    } else if(opacity < 0.33 && opacity >= 0.05) {
+    } else if(opacity.isBetween(0.05, 0.33)) {
         WA.room.hideLayer("night1");
         WA.room.hideLayer("night2");
     } else if(opacity < 0.05){
@@ -27,34 +52,21 @@ async function showNightLayers() {
     }
 }
 
-function hideNightLayers() {
-    nightLayers.forEach(element => {
-        WA.room.hideLayer(element);
-    });
-}
-
 function calculateOpacityBasedOnSunPhase(): number {
     const now = new Date();
-    let isTwilight = false;
     let opacity = 1;
 
     // Überprüfen, ob die aktuelle Zeit zwischen dawn und sunriseEnd liegt
-    if (now >= sunTimes.dawn && now < sunTimes.sunriseEnd) {
+    if (now.isBetween(sunTimes.dawn, sunTimes.sunriseEnd)) {
         // Deckkraft von 1 auf 0 reduzieren
         opacity = 1 - (now.getTime() - sunTimes.dawn.getTime()) / (sunTimes.sunriseEnd.getTime() - sunTimes.dawn.getTime());
-        console.log("Morgendämmerung: ", opacity);
-        isTwilight = true;
     } 
     // Überprüfen, ob die aktuelle Zeit zwischen sunsetStart und dusk liegt
-    else if (now >= sunTimes.sunsetStart && now < sunTimes.dusk) {
+    else if (now.isBetween(sunTimes.sunsetStart, sunTimes.dusk)) {
         // Deckkraft von 0 auf 1 erhöhen
         opacity = (now.getTime() - sunTimes.sunsetStart.getTime()) / (sunTimes.dusk.getTime() - sunTimes.sunsetStart.getTime());
-        console.log("Abenddämmerung: ", opacity);
-        isTwilight = true;
-    }
-
-    if (!isTwilight) {
-        console.log("Nacht");
+    } else if (now.isBetween(startDay, startNight)) {
+        opacity = 0;
     }
 
     return opacity;
@@ -72,19 +84,10 @@ function calculateDayAndNight() {
     console.log('Sonnenuntergang:', startNight);
 }
 
-function showLayer(){
-    const now = new Date();
-    if (now > startDay && now < startNight) {
-        hideNightLayers();
-    } else {
-        showNightLayers();
-    }
-}
-
 function startScheduler() {
     const cronNight = parseCronExpression('0 * * * * *');
     timerScheduler.setInterval(cronNight, () => {
-        showLayer();
+        showNightLayers();
     }, { errorHandler: (err) => console.log(err) });
 
 }
@@ -92,7 +95,7 @@ function startScheduler() {
 export class Night {
     static init() {
         calculateDayAndNight();
-        showLayer();
+        showNightLayers();
         startScheduler();
     }
 }
