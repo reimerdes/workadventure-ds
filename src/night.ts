@@ -14,8 +14,8 @@ var currentLayerStates: LayerStates = {
   night100: false,
   night66: false,
   night33: false,
-  nightAboveFurniture: false,
-  nightBelowFurniture: false
+  nightAboveFurniture: true,
+  nightBelowFurniture: true
 };
 
 declare global {
