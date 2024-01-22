@@ -34,7 +34,7 @@ declare global {
 }
 Number.prototype.isBetween = function(
     this: number, min: number, max: number): boolean {
-  return this >= min && this <= max;
+  return this >= min && this < max;
 };
 
 // Globale Variablen für Startzeiten von Tag und Nacht
@@ -64,7 +64,7 @@ async function showNightLayers() {
     });
     return;
   }
-  console.log('opacity', opacity);
+  
   setLayerVisibility('nightAboveFurniture', true);
   setLayerVisibility('nightBelowFurniture', true);
   setLayerVisibility('night100', opacity > 0.66);
