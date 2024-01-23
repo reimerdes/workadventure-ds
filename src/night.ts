@@ -6,6 +6,18 @@ var nightLayers = [
   'night100', 'night66', 'night33', 'nightAboveFurniture', 'nightBelowFurniture'
 ]
 
+interface LayerStates {
+  [key: string]: boolean;
+}
+
+var currentLayerStates: LayerStates = {
+  night100: false,
+  night66: false,
+  night33: false,
+  nightAboveFurniture: true,
+  nightBelowFurniture: true
+};
+
 declare global {
   interface Date {
     isBetween(start: Date, end: Date): boolean;
@@ -22,7 +34,7 @@ declare global {
 }
 Number.prototype.isBetween = function(
     this: number, min: number, max: number): boolean {
-  return this >= min && this <= max;
+  return this >= min && this < max;
 };
 
 // Globale Variablen für Startzeiten von Tag und Nacht
@@ -30,35 +42,34 @@ var sunTimes: GetTimesResult;
 var startDay: Date;
 var startNight: Date;
 
+function setLayerVisibility(layerName: string, isVisible: boolean) {
+  // Überprüfen, ob der Zustand geändert werden muss
+  if (currentLayerStates[layerName] !== isVisible) {
+    if (isVisible) {
+      WA.room.showLayer(layerName);
+    } else {
+      WA.room.hideLayer(layerName);
+    }
+    // Aktualisieren des Zustands
+    currentLayerStates[layerName] = isVisible;
+  }
+}
+
 async function showNightLayers() {
   const opacity = calculateOpacityBasedOnSunPhase();
-  if (opacity === 0) {
+
+  if (opacity < 0.01) {
     nightLayers.forEach(element => {
-      WA.room.hideLayer(element);
+      setLayerVisibility(element, false);
     });
     return;
   }
-
-  // Alle Layer anzeigen
-  nightLayers.forEach(element => {
-    WA.room.showLayer(element);
-  });
-
-  if (opacity > 0.66) { // 100% Nacht
-    WA.room.hideLayer('night66');
-    WA.room.hideLayer('night33');
-  } else if (opacity.isBetween(0.33, 0.66)) { // 66% Nacht
-    WA.room.hideLayer('night100');
-    WA.room.hideLayer('night33');
-  } else if (opacity.isBetween(0.01, 0.33)) { // 33% Nacht
-    WA.room.hideLayer('night100');
-    WA.room.hideLayer('night66');
-  } else if (opacity < 0.01) { // 0% Nacht
-    WA.room.hideLayer('night100');
-    WA.room.hideLayer('night66');
-    WA.room.hideLayer('night33');
-    WA.room.hideLayer('nightAboveFurniture');
-  }
+  
+  setLayerVisibility('nightAboveFurniture', true);
+  setLayerVisibility('nightBelowFurniture', true);
+  setLayerVisibility('night100', opacity > 0.66);
+  setLayerVisibility('night66', opacity.isBetween(0.33, 0.66));
+  setLayerVisibility('night33', opacity.isBetween(0.01, 0.33));
 }
 
 function calculateOpacityBasedOnSunPhase(): number {
