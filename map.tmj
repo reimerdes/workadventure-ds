@@ -5192,6 +5192,7 @@
          "spacing":0,
          "tilecount":20,
          "tileheight":16,
+         "tilerendersize":"grid",
          "tilewidth":16
         }],
  "tilewidth":32,
