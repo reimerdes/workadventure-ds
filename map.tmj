@@ -2816,7 +2816,7 @@
          "name":"Easter",
          "opacity":1,
          "type":"group",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 
