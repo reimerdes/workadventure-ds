@@ -48,9 +48,18 @@ function showOrHideEasterLayer() {
 function showOrHideHalloweenLayer() {
   const today = new Date();
 
-  const halloweenDate = new Date(today.getFullYear(), 10, 31);
+  const halloweenDate = new Date(today.getFullYear(), 9, 31);
 
-  showOrHideLayer('Halloween', new Date(halloweenDate.getDate() - 10), new Date(halloweenDate.getDate() + 7));
+  const halloweenStart = new Date(halloweenDate);
+  halloweenStart.setDate(halloweenDate.getDate() - 10);
+
+  const halloweenEnd = new Date(halloweenDate);
+  halloweenEnd.setDate(halloweenDate.getDate() + 7);
+
+  console.log("Halloween start: " + halloweenStart);
+  console.log("Halloween end: " + halloweenEnd);
+
+  showOrHideLayer('Halloween', halloweenStart, halloweenEnd);
 }
 
 function calculateEasterDate(year: number): Date {
