@@ -35,11 +35,11 @@ function showOrHideEasterLayer() {
   const easterDate = calculateEasterDate(today.getFullYear());
 
   // Das Startdatum ist Karfreitag, eine Woche vor dem Osterdatum
-  const startDate = new Date(easterDate);
+  let startDate = new Date(easterDate);
   startDate.setDate(easterDate.getDate() - 7);
 
   // Das Enddatum ist Ostermontag, eine Woche nach dem Osterdatum
-  const endDate = new Date(easterDate);
+  let endDate = new Date(easterDate);
   endDate.setDate(easterDate.getDate() + 7);
 
   showOrHideLayer('Easter', startDate, endDate);
@@ -48,9 +48,18 @@ function showOrHideEasterLayer() {
 function showOrHideHalloweenLayer() {
   const today = new Date();
 
-  const halloweenDate = new Date(today.getFullYear(), 10, 31);
+  const halloweenDate = new Date(today.getFullYear(), 9, 31);
 
-  showOrHideLayer('Halloween', new Date(halloweenDate.getDate() - 10), new Date(halloweenDate.getDate() + 7));
+  let halloweenStart = new Date(halloweenDate);
+  halloweenStart.setDate(halloweenDate.getDate() - 10);
+
+  let halloweenEnd = new Date(halloweenDate);
+  halloweenEnd.setDate(halloweenDate.getDate() + 7);
+
+  console.log("Halloween start: " + halloweenStart);
+  console.log("Halloween end: " + halloweenEnd);
+
+  showOrHideLayer('Halloween', halloweenStart, halloweenEnd);
 }
 
 function calculateEasterDate(year: number): Date {
