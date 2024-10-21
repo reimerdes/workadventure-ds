@@ -50,10 +50,10 @@ function showOrHideHalloweenLayer() {
 
   const halloweenDate = new Date(today.getFullYear(), 9, 31);
 
-  const halloweenStart = new Date(halloweenDate);
+  let halloweenStart = new Date(halloweenDate);
   halloweenStart.setDate(halloweenDate.getDate() - 10);
 
-  const halloweenEnd = new Date(halloweenDate);
+  let halloweenEnd = new Date(halloweenDate);
   halloweenEnd.setDate(halloweenDate.getDate() + 7);
 
   console.log("Halloween start: " + halloweenStart);
