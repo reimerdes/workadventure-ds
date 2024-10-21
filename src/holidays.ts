@@ -35,11 +35,11 @@ function showOrHideEasterLayer() {
   const easterDate = calculateEasterDate(today.getFullYear());
 
   // Das Startdatum ist Karfreitag, eine Woche vor dem Osterdatum
-  const startDate = new Date(easterDate);
+  let startDate = new Date(easterDate);
   startDate.setDate(easterDate.getDate() - 7);
 
   // Das Enddatum ist Ostermontag, eine Woche nach dem Osterdatum
-  const endDate = new Date(easterDate);
+  let endDate = new Date(easterDate);
   endDate.setDate(easterDate.getDate() + 7);
 
   showOrHideLayer('Easter', startDate, endDate);
