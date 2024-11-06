@@ -54,7 +54,7 @@ function showOrHideHalloweenLayer() {
   halloweenStart.setDate(halloweenDate.getDate() - 10);
 
   let halloweenEnd = new Date(halloweenDate);
-  halloweenEnd.setDate(halloweenDate.getDate() + 7);
+  halloweenEnd.setDate(halloweenDate.getDate() + 3);
 
   console.log("Halloween start: " + halloweenStart);
   console.log("Halloween end: " + halloweenEnd);
