@@ -4104,8 +4104,35 @@
                  "y":1184
                 }, 
                 {
-                 "height":192,
+                 "height":189.866666666667,
                  "id":59,
+                 "name":"loungeArea",
+                 "properties":[
+                        {
+                         "name":"audioLoop",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"audioVolume",
+                         "type":"float",
+                         "value":0.025
+                        }, 
+                        {
+                         "name":"playAudio",
+                         "type":"string",
+                         "value":".\/sounds\/holiday_cheer.mp3"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":176,
+                 "x":1181.86666666667,
+                 "y":994.133333333333
+                }, 
+                {
+                 "height":192,
+                 "id":67,
                  "name":"pauseArea",
                  "properties":[
                         {
@@ -5486,7 +5513,7 @@
          "y":0
         }],
  "nextlayerid":224,
- "nextobjectid":67,
+ "nextobjectid":68,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -5525,7 +5552,7 @@
          "value":false
         }],
  "renderorder":"right-down",
- "tiledversion":"1.10.2",
+ "tiledversion":"1.8.5",
  "tileheight":32,
  "tilesets":[
         {
@@ -6455,6 +6482,6 @@
         }],
  "tilewidth":32,
  "type":"map",
- "version":"1.10",
+ "version":"1.8",
  "width":70
 }
