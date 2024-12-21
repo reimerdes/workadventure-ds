@@ -1589,17 +1589,17 @@
                  "name":"loungeArea",
                  "properties":[
                         {
-                         "name":"audioLoop",
+                         "name":"_audioLoop",
                          "type":"bool",
                          "value":true
                         }, 
                         {
-                         "name":"audioVolume",
+                         "name":"_audioVolume",
                          "type":"float",
-                         "value":0.025
+                         "value":0.005
                         }, 
                         {
-                         "name":"playAudio",
+                         "name":"_playAudio",
                          "type":"string",
                          "value":".\/sounds\/holiday_cheer.mp3"
                         }],
