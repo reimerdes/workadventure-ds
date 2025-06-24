@@ -5103,11 +5103,6 @@
                  "name":"zoneEntryLeft",
                  "properties":[
                         {
-                         "name":"audioVolume",
-                         "type":"float",
-                         "value":0.1
-                        }, 
-                        {
                          "name":"autoClose",
                          "type":"bool",
                          "value":true
@@ -5121,11 +5116,6 @@
                          "name":"doorVariable",
                          "type":"string",
                          "value":"doorEntryLeft"
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/ent_door01.mp3 "
                         }, 
                         {
                          "name":"zone",
@@ -5145,11 +5135,6 @@
                  "name":"zoneEntryRight",
                  "properties":[
                         {
-                         "name":"audioVolume",
-                         "type":"float",
-                         "value":0.1
-                        }, 
-                        {
                          "name":"autoClose",
                          "type":"bool",
                          "value":true
@@ -5163,11 +5148,6 @@
                          "name":"doorVariable",
                          "type":"string",
                          "value":"doorEntryRight"
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/ent_door01.mp3"
                         }, 
                         {
                          "name":"zone",
@@ -5187,11 +5167,6 @@
                  "name":"zoneShip",
                  "properties":[
                         {
-                         "name":"audioVolume",
-                         "type":"float",
-                         "value":0.1
-                        }, 
-                        {
                          "name":"autoClose",
                          "type":"bool",
                          "value":true
@@ -5205,11 +5180,6 @@
                          "name":"doorVariable",
                          "type":"string",
                          "value":"doorShip"
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/ent_door01.mp3"
                         }, 
                         {
                          "name":"zone",
@@ -5227,22 +5197,6 @@
                  "height":189.866666666667,
                  "id":59,
                  "name":"loungeArea",
-                 "properties":[
-                        {
-                         "name":"_audioLoop",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"_audioVolume",
-                         "type":"float",
-                         "value":0.005
-                        }, 
-                        {
-                         "name":"_playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/holiday_cheer.mp3"
-                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5254,22 +5208,6 @@
                  "height":192,
                  "id":67,
                  "name":"pauseArea",
-                 "properties":[
-                        {
-                         "name":"audioLoop",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"audioVolume",
-                         "type":"float",
-                         "value":0.025
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/pause.mp3"
-                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5282,11 +5220,6 @@
                  "id":61,
                  "name":"zoneBackdoor",
                  "properties":[
-                        {
-                         "name":"audioVolume",
-                         "type":"float",
-                         "value":0.1
-                        }, 
                         {
                          "name":"autoClose",
                          "type":"bool",
@@ -5301,11 +5234,6 @@
                          "name":"doorVariable",
                          "type":"string",
                          "value":"doorBack"
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/ent_door01.mp3"
                         }, 
                         {
                          "name":"zone",
@@ -5325,11 +5253,6 @@
                  "name":"zoneMeetingRoom",
                  "properties":[
                         {
-                         "name":"audioVolume",
-                         "type":"float",
-                         "value":0.1
-                        }, 
-                        {
                          "name":"autoClose",
                          "type":"bool",
                          "value":true
@@ -5343,11 +5266,6 @@
                          "name":"doorVariable",
                          "type":"string",
                          "value":"doorMeetingRoom"
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/ent_door01.mp3"
                         }, 
                         {
                          "name":"zone",
@@ -5367,11 +5285,6 @@
                  "name":"zoneEmergencyRoom",
                  "properties":[
                         {
-                         "name":"audioVolume",
-                         "type":"float",
-                         "value":0.1
-                        }, 
-                        {
                          "name":"autoClose",
                          "type":"bool",
                          "value":true
@@ -5385,11 +5298,6 @@
                          "name":"doorVariable",
                          "type":"string",
                          "value":"doorEmergency"
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/ent_door01.mp3"
                         }, 
                         {
                          "name":"zone",
@@ -5409,11 +5317,6 @@
                  "name":"zoneCenter",
                  "properties":[
                         {
-                         "name":"audioVolume",
-                         "type":"float",
-                         "value":0.1
-                        }, 
-                        {
                          "name":"autoClose",
                          "type":"bool",
                          "value":true
@@ -5427,11 +5330,6 @@
                          "name":"doorVariable",
                          "type":"string",
                          "value":"doorCenter"
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/ent_door01.mp3"
                         }, 
                         {
                          "name":"zone",
