@@ -14,11 +14,22 @@ const BUNDLE_BASE = (() => {
 })();
 
 function assetUrl(path: string): string {
-  if (/^https?:\/\//i.test(path)) return path;        
-  const clean = path.replace(/^\.?\//, '');          
-  if (BUNDLE_BASE) return BUNDLE_BASE + clean;       
+  const input = path;
+  console.debug('[assetUrl] input:', input);
+  if (/^https?:\/\//i.test(path)) {
+    console.debug('[assetUrl]', { input, resolved: path });
+    return path;
+  }
+  const clean = path.replace(/^\.?\//, '');
+  if (BUNDLE_BASE) {
+    const resolved = BUNDLE_BASE + clean;
+    console.debug('[assetUrl]', { input, clean, base: BUNDLE_BASE, resolved });
+    return resolved;
+  }
   const origin = typeof window !== 'undefined' ? window.location.origin + '/' : '';
-  return origin + clean;
+  const resolved = origin + clean;
+  console.debug('[assetUrl]', { input, clean, base: origin, resolved });
+  return resolved;
 }
 
 enum PositionType {
@@ -160,7 +171,7 @@ function addCustomerCallButton() {
 
 function addPoolButton() {
     addTeleportButton('pool-btn',
-        'ds/pool.png',
+        assetUrl('ds/pool.png'),
         'Zum Pool-Bereich teleportieren und zurück',
         PositionType.LastPositionPool,
         async () => await WA.room.area.get('poolArea'));
