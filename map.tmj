@@ -5355,15 +5355,26 @@
                  "y":1023.99513507295
                 }, 
                 {
-                 "height":32,
+                 "height":192,
                  "id":64,
+                 "name":"poolArea",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":256,
+                 "x":64,
+                 "y":1504
+                }, 
+                {
+                 "height":32,
+                 "id":89,
                  "name":"ccArea1",
                  "rotation":0,
                  "type":"area",
                  "visible":true,
                  "width":96,
-                 "x":512,
-                 "y":1024
+                 "x":1137.09141016832,
+                 "y":715.588042690786
                 }],
          "offsetx":0.00808080808080774,
          "offsety":0.0176953934345254,
@@ -7108,8 +7119,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":238,
- "nextobjectid":89,
+ "nextlayerid":239,
+ "nextobjectid":90,
  "orientation":"orthogonal",
  "properties":[
         {
