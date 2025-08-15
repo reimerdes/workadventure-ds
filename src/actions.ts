@@ -2,11 +2,23 @@ import { Area } from '@workadventure/iframe-api-typings/iframe_api.js';
 
 const tileSize = 32;
 
+// Ermittelt die Basis-URL aus der Bundle-URL (prod) bzw. src-URL (dev)
+const BUNDLE_BASE = (() => {
+  try {
+    const u = (import.meta as any).url as string | undefined;
+    if (!u) return '';
+    return u.replace(/\/(assets|src)\/.*$/, '/');
+  } catch {
+    return '';
+  }
+})();
+
 function assetUrl(path: string): string {
-  if (/^https?:\/\//i.test(path)) return path;            // schon absolut
-  const clean = path.replace(/^\.?\//, '');               // './ds/x.png' -> 'ds/x.png'
-  // main-xxxx.js liegt unter /assets/ -> '..' geht auf Repo-Basis (z.B. /workadventure-ds/)
-  return new URL(clean, new URL('..', import.meta.url)).toString();
+  if (/^https?:\/\//i.test(path)) return path;        
+  const clean = path.replace(/^\.?\//, '');          
+  if (BUNDLE_BASE) return BUNDLE_BASE + clean;       
+  const origin = typeof window !== 'undefined' ? window.location.origin + '/' : '';
+  return origin + clean;
 }
 
 enum PositionType {
