@@ -15,20 +15,20 @@ const BUNDLE_BASE = (() => {
 
 function assetUrl(path: string): string {
   const input = path;
-  console.debug('[assetUrl] input:', input);
+  console.log('[assetUrl] param:', input);
   if (/^https?:\/\//i.test(path)) {
-    console.debug('[assetUrl]', { input, resolved: path });
+    console.log('[assetUrl] input', { input, resolved: path });
     return path;
   }
   const clean = path.replace(/^\.?\//, '');
   if (BUNDLE_BASE) {
     const resolved = BUNDLE_BASE + clean;
-    console.debug('[assetUrl]', { input, clean, base: BUNDLE_BASE, resolved });
+    console.log('[assetUrl] bundle', { input, clean, base: BUNDLE_BASE, resolved });
     return resolved;
   }
   const origin = typeof window !== 'undefined' ? window.location.origin + '/' : '';
   const resolved = origin + clean;
-  console.debug('[assetUrl]', { input, clean, base: origin, resolved });
+  console.log('[assetUrl] default', { input, clean, base: origin, resolved });
   return resolved;
 }
 
