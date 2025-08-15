@@ -1476,7 +1476,7 @@
                         {
                          "name":"jitsiConfig",
                          "type":"string",
-                         "value":"{ \"p2p\": { \"enabled\": false, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\"preferredCodec\": \"VP9\", \"maxBitratesVideo\": { \"low\": 100000, \"standard\": 500000, \"high\": 3000000, \"H264\": { \"low\": 100000, \"standard\": 500000, \"high\": 3000000 }, \"VP8\" : { \"low\": 100000, \"standard\": 500000, \"high\": 3000000 }, \"VP9\": { \"low\": 100000, \"standard\": 500000, \"high\": 3000000 } }, \"minHeightForQualityLvl\": { \"360\": \"standard\", \"720\": \"high\" } }, \"disableSimulcast\": false, \"enableLayerSuspension\": true, \"disableRtx\": true, \"enableTcc\": true}"
+                         "value":"{ \"p2p\": { \"enabled\": false, \"preferredCodec\": \"VP9\"}, \"videoQuality\": {\"preferredCodec\": \"VP9\", \"maxBitratesVideo\": { \"low\": 100000, \"standard\": 500000, \"high\": 3000000, \"H264\": { \"low\": 100000, \"standard\": 500000, \"high\": 3000000 }, \"VP8\" : { \"low\": 100000, \"standard\": 500000, \"high\": 3000000 }, \"VP9\": { \"low\": 100000, \"standard\": 500000, \"high\": 3000000 } }, \"minHeightForQualityLvl\": { \"360\": \"standard\", \"720\": \"high\" } }, \"disableSimulcast\": false, \"enableLayerSuspension\": true, \"disableRtx\": false, \"enableTcc\": true, \"desktopSharingFrameRate\": { \"min\": 15, \"max\": 30 }}"
                         }, 
                         {
                          "name":"jitsiRoom",
@@ -7148,7 +7148,7 @@
          "value":false
         }],
  "renderorder":"right-down",
- "tiledversion":"1.11.2-130-gf0191439",
+ "tiledversion":"1.11.1-99-gec89c545",
  "tileheight":32,
  "tilesets":[
         {
