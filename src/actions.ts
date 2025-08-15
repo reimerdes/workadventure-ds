@@ -160,7 +160,7 @@ function addCustomerCallButton() {
 
 function addPoolButton() {
     addTeleportButton('pool-btn',
-        assetUrl('ds/pool.png'),
+        'ds/pool.png',
         'Zum Pool-Bereich teleportieren und zurück',
         PositionType.LastPositionPool,
         async () => await WA.room.area.get('poolArea'));
