@@ -1,4 +1,3 @@
-/// <reference types="@workadventure/iframe-api-typings" />
 import { Area } from '@workadventure/iframe-api-typings/iframe_api.js';
 
 const tileSize = 32;
@@ -101,7 +100,7 @@ async function teleportPlayerToArea(area: Area | undefined, positionType: Positi
 
 function addPauseButton() {
     addTeleportButton('pause-btn',
-        '/ds/pause.png',
+        './ds/pause.png',
         'Zum Pausenbereich teleportieren und zurück',
         PositionType.LastPositionBreak,
         async () => await WA.room.area.get("pauseArea"));
@@ -109,7 +108,7 @@ function addPauseButton() {
 
 function addCustomerCallButton() {
     addTeleportButton('customer-call-btn',
-        '/ds/call.png',
+        './ds/call.png',
         'Zum \'Im Gespräch\'-Bereich teleportieren und zurück',
         PositionType.LastPositionCall,
         async () => {
@@ -142,7 +141,7 @@ function addCustomerCallButton() {
 
 function addPoolButton() {
     addTeleportButton('pool-btn',
-        '/ds/pool.png',
+        './ds/pool.png',
         'Zum Pool-Bereich teleportieren und zurück',
         PositionType.LastPositionPool,
         async () => await WA.room.area.get('poolArea'));
