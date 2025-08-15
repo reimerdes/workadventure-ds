@@ -14,22 +14,7 @@ const BUNDLE_BASE = (() => {
 })();
 
 function assetUrl(path: string): string {
-  const input = path;
-  console.log('[assetUrl] param:', input);
-  if (/^https?:\/\//i.test(path)) {
-    console.log('[assetUrl] input', { input, resolved: path });
-    return path;
-  }
-  const clean = path.replace(/^\.?\//, '');
-  if (BUNDLE_BASE) {
-    const resolved = BUNDLE_BASE + clean;
-    console.log('[assetUrl] bundle', { input, clean, base: BUNDLE_BASE, resolved });
-    return resolved;
-  }
-  const origin = typeof window !== 'undefined' ? window.location.origin + '/' : '';
-  const resolved = origin + clean;
-  console.log('[assetUrl] default', { input, clean, base: origin, resolved });
-  return resolved;
+  return BUNDLE_BASE + path;
 }
 
 enum PositionType {
