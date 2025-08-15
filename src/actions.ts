@@ -2,6 +2,20 @@ import { Area } from '@workadventure/iframe-api-typings/iframe_api.js';
 
 const tileSize = 32;
 
+function assetUrl(path: string): string {
+    const raw = path;
+    const trimmed = (path ?? '').trim();
+    const base = (typeof window !== 'undefined' && window.location) ? window.location.href : '';
+    try {
+        const resolved = new URL(trimmed, base).toString();
+        console.debug('[assetUrl] resolved', { raw, trimmed, base, resolved });
+        return resolved;
+    } catch (error) {
+        console.warn('[assetUrl] failed to resolve, falling back to trimmed', { raw, trimmed, base, error });
+        return trimmed;
+    }
+}
+
 enum PositionType {
     LastPositionBreak,
     LastPositionCall,
@@ -100,7 +114,7 @@ async function teleportPlayerToArea(area: Area | undefined, positionType: Positi
 
 function addPauseButton() {
     addTeleportButton('pause-btn',
-        './ds/pause.png',
+        assetUrl('./ds/pause.png'),
         'Zum Pausenbereich teleportieren und zurück',
         PositionType.LastPositionBreak,
         async () => await WA.room.area.get("pauseArea"));
@@ -108,7 +122,7 @@ function addPauseButton() {
 
 function addCustomerCallButton() {
     addTeleportButton('customer-call-btn',
-        './ds/call.png',
+        assetUrl('./ds/call.png'),
         'Zum \'Im Gespräch\'-Bereich teleportieren und zurück',
         PositionType.LastPositionCall,
         async () => {
@@ -141,7 +155,7 @@ function addCustomerCallButton() {
 
 function addPoolButton() {
     addTeleportButton('pool-btn',
-        './ds/pool.png',
+        assetUrl('./ds/pool.png'),
         'Zum Pool-Bereich teleportieren und zurück',
         PositionType.LastPositionPool,
         async () => await WA.room.area.get('poolArea'));
