@@ -3,11 +3,6 @@ import { Holidays } from './holidays.js';
 import { Actions } from './actions.js';
 import { Night } from './night.js';
 
-(async () => {
-  await WA.onInit();
-})();
-
-// Waiting for the API to be ready
 WA.onInit()
   .then(() => {
     const userTag = WA.player.tags;
@@ -19,10 +14,11 @@ WA.onInit()
 
     Actions.registerActions();
     Holidays.init();
-    Night.init()
+    Night.init();
 
+    // Subscriptions sammeln (optional, aber sauberer)
     WA.room.area.onEnter("gewaechshausArea").subscribe(() => {
-       WA.room.hideLayer('Gewaechshaus');
+      WA.room.hideLayer('Gewaechshaus');
     });
 
     WA.room.area.onLeave("gewaechshausArea").subscribe(() => {
