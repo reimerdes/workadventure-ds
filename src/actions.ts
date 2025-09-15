@@ -2,9 +2,25 @@ import { Area } from '@workadventure/iframe-api-typings/iframe_api.js';
 
 const tileSize = 32;
 
+// Ermittelt die Basis-URL aus der Bundle-URL (prod) bzw. src-URL (dev)
+const BUNDLE_BASE = (() => {
+  try {
+    const u = (import.meta as any).url as string | undefined;
+    if (!u) return '';
+    return u.replace(/\/(assets|src)\/.*$/, '/');
+  } catch {
+    return '';
+  }
+})();
+
+function assetUrl(path: string): string {
+  return BUNDLE_BASE + path;
+}
+
 enum PositionType {
     LastPositionBreak,
     LastPositionCall,
+    LastPositionPool,
 }
 
 interface Position {
@@ -15,6 +31,7 @@ interface Position {
 const positions: Record<PositionType, Position> = {
     [PositionType.LastPositionBreak]: { x: undefined, y: undefined },
     [PositionType.LastPositionCall]: { x: undefined, y: undefined },
+    [PositionType.LastPositionPool]: { x: undefined, y: undefined },
 };
 
 function clearLastPositions() {
@@ -32,6 +49,9 @@ function registerAreaOnLeaveHandler() {
         clearLastPositions();
     });
     WA.room.area.onLeave('ccArea2').subscribe(() => {
+        clearLastPositions();
+    });
+    WA.room.area.onLeave('poolArea').subscribe(() => {
         clearLastPositions();
     });
 }
@@ -95,7 +115,7 @@ async function teleportPlayerToArea(area: Area | undefined, positionType: Positi
 
 function addPauseButton() {
     addTeleportButton('pause-btn',
-        'https://github.com/reimerdes/workadventure-ds/blob/master/src/assets/ds/pause.png?raw=true',
+        assetUrl('ds/pause.png'),
         'Zum Pausenbereich teleportieren und zurück',
         PositionType.LastPositionBreak,
         async () => await WA.room.area.get("pauseArea"));
@@ -103,7 +123,7 @@ function addPauseButton() {
 
 function addCustomerCallButton() {
     addTeleportButton('customer-call-btn',
-        'https://github.com/reimerdes/workadventure-ds/blob/master/src/assets/ds/call.png?raw=true',
+        assetUrl('ds/call.png'),
         'Zum \'Im Gespräch\'-Bereich teleportieren und zurück',
         PositionType.LastPositionCall,
         async () => {
@@ -134,14 +154,24 @@ function addCustomerCallButton() {
         });
 }
 
+function addPoolButton() {
+    addTeleportButton('pool-btn',
+        assetUrl('ds/pool.png'),
+        'Zum Pool-Bereich teleportieren und zurück',
+        PositionType.LastPositionPool,
+        async () => await WA.room.area.get('poolArea'));
+}
+
 function addActionButtons() {
     addPauseButton();
     addCustomerCallButton();
+    addPoolButton();
 }
 
 function removeButtons() {
     WA.ui.actionBar.removeButton('pause-btn');
     WA.ui.actionBar.removeButton('customer-call-btn');
+    WA.ui.actionBar.removeButton('pool-btn');
 }
 
 export class Actions {
