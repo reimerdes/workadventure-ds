@@ -21,6 +21,14 @@ WA.onInit()
     Holidays.init();
     Night.init()
 
+    WA.room.area.onEnter("gewaechshausArea").subscribe(() => {
+       WA.room.hideLayer('Gewaechshaus');
+    });
+
+    WA.room.area.onLeave("gewaechshausArea").subscribe(() => {
+      WA.room.showLayer('Gewaechshaus');
+    });
+
     // The line below bootstraps the Scripting API Extra library that adds a
     // number of advanced properties/features to WorkAdventure
     bootstrapExtra()
