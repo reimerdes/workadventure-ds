@@ -7340,7 +7340,7 @@
          "value":false
         }],
  "renderorder":"right-down",
- "tiledversion":"1.11.1-99-gec89c545",
+ "tiledversion":"1.11.2",
  "tileheight":32,
  "tilesets":[
         {
@@ -8265,6 +8265,19 @@
          "name":"Door",
          "spacing":0,
          "tilecount":56,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":32,
+         "firstgid":123366,
+         "image":"..\/..\/Downloads\/Modern_Farm_v1.1.5\/32x32\/0_Complete_Tileset_32x32.png",
+         "imageheight":11712,
+         "imagewidth":1024,
+         "margin":0,
+         "name":"Mordern Farm",
+         "spacing":0,
+         "tilecount":11712,
          "tileheight":32,
          "tilewidth":32
         }],
