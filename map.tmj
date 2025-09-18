@@ -5371,8 +5371,8 @@
                  "type":"area",
                  "visible":true,
                  "width":96,
-                 "x":1137.09141016832,
-                 "y":715.588042690786
+                 "x":512.557368413791,
+                 "y":1023.49831093604
                 }, 
                 {
                  "height":238,
@@ -5385,8 +5385,6 @@
                  "x":1641,
                  "y":1600
                 }],
-         "offsetx":0.00808080808080774,
-         "offsety":0.0176953934345254,
          "opacity":1,
          "type":"objectgroup",
          "visible":false,
@@ -7340,7 +7338,7 @@
          "value":false
         }],
  "renderorder":"right-down",
- "tiledversion":"1.11.2-146-g013f1655",
+ "tiledversion":"1.11.2-166-g36a2b405",
  "tileheight":32,
  "tilesets":[
         {
