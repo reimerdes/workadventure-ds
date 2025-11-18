@@ -59,7 +59,6 @@ function registerAreaOnLeaveHandler() {
 function addTeleportButton(id: string, imageSrc: string, toolTip: string, positionType: PositionType, getArea: () => Promise<Area | undefined>) {
     WA.ui.actionBar.addButton({
         id,
-        type: 'action',
         imageSrc,
         toolTip,
         callback: async () => {
