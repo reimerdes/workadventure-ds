@@ -54,6 +54,15 @@ function registerAreaOnLeaveHandler() {
     WA.room.area.onLeave('poolArea').subscribe(() => {
         clearLastPositions();
     });
+    WA.room.area.onLeave('loungeArea').subscribe(() => {
+        clearLastPositions();
+    });
+    WA.room.area.onLeave('meetingArea').subscribe(() => {
+        clearLastPositions();
+    });
+    WA.room.area.onLeave('gewaechshausArea').subscribe(() => {
+        clearLastPositions();
+    });
 }
 
 function addTeleportButton(id: string, imageSrc: string, toolTip: string, positionType: PositionType, getArea: () => Promise<Area | undefined>) {
@@ -161,9 +170,36 @@ function addPoolButton() {
         async () => await WA.room.area.get('poolArea'));
 }
 
+function addLoungeButton() {
+    addTeleportButton('lounge-btn',
+        assetUrl('ds/lounge.png'),
+        'Zum Lounge-Bereich teleportieren und zurück',
+        PositionType.LastPositionBreak,
+        async () => await WA.room.area.get('loungeArea'));
+}
+
+function addMeetingButton() {
+    addTeleportButton('meeting-btn',
+        assetUrl('ds/meeting.png'),
+        'Zum Meeting-Bereich teleportieren und zurück',
+        PositionType.LastPositionBreak,
+        async () => await WA.room.area.get('meetingArea'));
+}
+
+function addGewaechshausButton() {
+    addTeleportButton('gewaechshaus-btn',
+        assetUrl('ds/greenhouse.png'),
+        'Zum Gewächshaus-Bereich teleportieren und zurück',
+        PositionType.LastPositionBreak,
+        async () => await WA.room.area.get('gewaechshausArea'));
+}
+
 function addActionButtons() {
     addPauseButton();
     addCustomerCallButton();
+    addMeetingButton();
+    addLoungeButton();
+    addGewaechshausButton();
     addPoolButton();
 }
 
@@ -171,6 +207,9 @@ function removeButtons() {
     WA.ui.actionBar.removeButton('pause-btn');
     WA.ui.actionBar.removeButton('customer-call-btn');
     WA.ui.actionBar.removeButton('pool-btn');
+    WA.ui.actionBar.removeButton('lounge-btn');
+    WA.ui.actionBar.removeButton('meeting-btn');
+    WA.ui.actionBar.removeButton('gewaechshaus-btn');
 }
 
 export class Actions {

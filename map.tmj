@@ -5384,6 +5384,38 @@
                  "width":300,
                  "x":1641,
                  "y":1600
+                }, 
+                {
+                 "height":248,
+                 "id":91,
+                 "name":"meetingArea",
+                 "properties":[
+                        {
+                         "name":"autoClose",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"autoOpen",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"doorVariable",
+                         "type":"string",
+                         "value":"doorMeetingRoom"
+                        }, 
+                        {
+                         "name":"zone",
+                         "type":"string",
+                         "value":"zoneEntryRight"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":382,
+                 "x":1088,
+                 "y":484
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -7298,8 +7330,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":243,
- "nextobjectid":91,
+ "nextlayerid":244,
+ "nextobjectid":92,
  "orientation":"orthogonal",
  "properties":[
         {
