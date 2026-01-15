@@ -170,46 +170,16 @@ function addPoolButton() {
         async () => await WA.room.area.get('poolArea'));
 }
 
-function addLoungeButton() {
-    addTeleportButton('lounge-btn',
-        assetUrl('ds/lounge.png'),
-        'Zum Lounge-Bereich teleportieren und zurück',
-        PositionType.LastPositionBreak,
-        async () => await WA.room.area.get('loungeArea'));
-}
-
-function addMeetingButton() {
-    addTeleportButton('meeting-btn',
-        assetUrl('ds/meeting.png'),
-        'Zum Meeting-Bereich teleportieren und zurück',
-        PositionType.LastPositionBreak,
-        async () => await WA.room.area.get('meetingArea'));
-}
-
-function addGewaechshausButton() {
-    addTeleportButton('gewaechshaus-btn',
-        assetUrl('ds/greenhouse.png'),
-        'Zum Gewächshaus-Bereich teleportieren und zurück',
-        PositionType.LastPositionBreak,
-        async () => await WA.room.area.get('gewaechshausArea'));
-}
-
 function addActionButtons() {
     addPauseButton();
     addCustomerCallButton();
     addPoolButton();
-    // addMeetingButton();
-    // addLoungeButton();
-    // addGewaechshausButton();
 }
 
 function removeButtons() {
     WA.ui.actionBar.removeButton('pause-btn');
     WA.ui.actionBar.removeButton('customer-call-btn');
     WA.ui.actionBar.removeButton('pool-btn');
-    // WA.ui.actionBar.removeButton('lounge-btn');
-    // WA.ui.actionBar.removeButton('meeting-btn');
-    // WA.ui.actionBar.removeButton('gewaechshaus-btn');
 }
 
 export class Actions {
