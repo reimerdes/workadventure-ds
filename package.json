@@ -10,17 +10,17 @@
     "prod": "vite preview"
   },
   "devDependencies": {
-    "@types/node": "^18.15.11",
-    "@workadventure/iframe-api-typings": "^1.18.3",
-    "dotenv": "^16.3.1",
-    "typescript": "^4.9.5",
-    "vite": "^4.3.9",
-    "wa-map-optimizer-vite": "^1.1.28"
+    "@types/node": "^24.10.1",
+    "@workadventure/iframe-api-typings": "^1.27.2",
+    "dotenv": "^17.2.3",
+    "typescript": "^5.9.3",
+    "vite": "^4.5.3",
+    "wa-map-optimizer-vite": "^1.1.31"
   },
   "dependencies": {
-    "@workadventure/scripting-api-extra": "^1.4.8",
-    "cron-schedule": "^4.0.0",
+    "@workadventure/scripting-api-extra": "^1.9.10",
+    "cron-schedule": "^5.0.4",
     "suncalc": "^1.x.x",
-    "@types/suncalc": "^1.9.0"
+    "@types/suncalc": "^1.9.2"
   }
 }
