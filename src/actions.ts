@@ -197,19 +197,19 @@ function addGewaechshausButton() {
 function addActionButtons() {
     addPauseButton();
     addCustomerCallButton();
-    addMeetingButton();
-    addLoungeButton();
-    addGewaechshausButton();
     addPoolButton();
+    // addMeetingButton();
+    // addLoungeButton();
+    // addGewaechshausButton();
 }
 
 function removeButtons() {
     WA.ui.actionBar.removeButton('pause-btn');
     WA.ui.actionBar.removeButton('customer-call-btn');
     WA.ui.actionBar.removeButton('pool-btn');
-    WA.ui.actionBar.removeButton('lounge-btn');
-    WA.ui.actionBar.removeButton('meeting-btn');
-    WA.ui.actionBar.removeButton('gewaechshaus-btn');
+    // WA.ui.actionBar.removeButton('lounge-btn');
+    // WA.ui.actionBar.removeButton('meeting-btn');
+    // WA.ui.actionBar.removeButton('gewaechshaus-btn');
 }
 
 export class Actions {
