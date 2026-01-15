@@ -5389,27 +5389,6 @@
                  "height":248,
                  "id":91,
                  "name":"meetingArea",
-                 "properties":[
-                        {
-                         "name":"autoClose",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"autoOpen",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"doorVariable",
-                         "type":"string",
-                         "value":"doorMeetingRoom"
-                        }, 
-                        {
-                         "name":"zone",
-                         "type":"string",
-                         "value":"zoneEntryRight"
-                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
