@@ -54,15 +54,6 @@ function registerAreaOnLeaveHandler() {
     WA.room.area.onLeave('poolArea').subscribe(() => {
         clearLastPositions();
     });
-    WA.room.area.onLeave('loungeArea').subscribe(() => {
-        clearLastPositions();
-    });
-    WA.room.area.onLeave('meetingArea').subscribe(() => {
-        clearLastPositions();
-    });
-    WA.room.area.onLeave('gewaechshausArea').subscribe(() => {
-        clearLastPositions();
-    });
 }
 
 function addTeleportButton(id: string, imageSrc: string, toolTip: string, positionType: PositionType, getArea: () => Promise<Area | undefined>) {
