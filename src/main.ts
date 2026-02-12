@@ -8,14 +8,6 @@ WA.onInit()
     .then(() => {
       const userTag = WA.player.tags;
 
-      // If user is admin, name it with a dark blue border
-      if (userTag.includes('admin')) {
-        WA.player.setOutlineColor(250, 176, 0);
-      }
-
-      // log user tags to console
-      console.log('User tags:', userTag);
-
       if (userTag.includes('member')) {
         Actions.registerActions();
         WA.player.setOutlineColor(68, 153, 169);
