@@ -10,12 +10,15 @@ WA.onInit()
 
       // If user is admin, name it with a dark blue border
       if (userTag.includes('admin')) {
-        WA.player.setOutlineColor(0xfa, 0xb0, 0x00);
+        WA.player.setOutlineColor(250, 176, 0);
       }
+
+      // log user tags to console
+      console.log('User tags:', userTag);
 
       if (userTag.includes('member')) {
         Actions.registerActions();
-        WA.player.setOutlineColor(0x44, 0x99, 0xa9);
+        WA.player.setOutlineColor(68, 153, 169);
       }
       Holidays.init();
       Night.init();
