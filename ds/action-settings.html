@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aktionen-Einstellungen</title>
+    <style>
+      :root {
+        color-scheme: dark;
+
+        --page-bg: rgba(12, 18, 31, 0.78);
+        --panel-bg: rgba(32, 38, 52, 0.55);
+        --panel-bg-strong: rgba(23, 33, 58, 0.92);
+        --row-bg: rgba(255, 255, 255, 0.03);
+
+        --text: #ffffff;
+        --muted: rgba(255, 255, 255, 0.68);
+        --soft: rgba(255, 255, 255, 0.5);
+
+        --border: rgba(255, 255, 255, 0.12);
+        --border-strong: rgba(255, 255, 255, 0.18);
+
+        --track: rgba(255, 255, 255, 0.2);
+        --thumb: #ffffff;
+
+        --accent: #6e7dff;
+        --accent-soft: rgba(110, 125, 255, 0.22);
+        --success: #9fd3a7;
+
+        --radius-xl: 18px;
+        --radius-lg: 14px;
+        --radius-md: 10px;
+
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        font-family: "Inter", "Segoe UI", "Noto Sans", sans-serif;
+        background: transparent;
+        color: var(--text);
+      }
+
+      body {
+        min-height: 100svh;
+      }
+
+      .settings-shell {
+        min-height: 100svh;
+        width: 100%;
+        padding: 16px;
+        background: linear-gradient(
+          180deg,
+          rgba(14, 24, 45, 0.78) 0%,
+          rgba(14, 19, 30, 0.82) 100%
+        );
+        backdrop-filter: blur(10px);
+      }
+
+      .settings-page {
+        display: grid;
+        gap: 16px;
+      }
+
+      .page-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 56px;
+        padding: 0 4px;
+      }
+
+      .page-header h1 {
+        margin: 0;
+        font-size: 29px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .page-header p {
+        margin: 2px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .section {
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-xl);
+        background: var(--panel-bg);
+        box-shadow: var(--shadow);
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        min-height: 52px;
+        padding: 0 18px;
+        background: var(--panel-bg-strong);
+        border-bottom: 1px solid var(--border);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .section-body {
+        padding: 18px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .setting-card {
+        display: grid;
+        gap: 12px;
+        padding: 16px;
+        background: var(--row-bg);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+      }
+
+      .setting-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .setting-copy {
+        min-width: 0;
+      }
+
+      .setting-label {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .setting-description {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-flex;
+        width: 54px;
+        height: 32px;
+        flex: 0 0 auto;
+      }
+
+      .switch input {
+        position: absolute;
+        opacity: 0;
+        inset: 0;
+        cursor: pointer;
+      }
+
+      .switch-slider {
+        width: 100%;
+        height: 100%;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid var(--border-strong);
+        transition:
+          background 0.18s ease,
+          border-color 0.18s ease;
+        position: relative;
+      }
+
+      .switch-slider::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+        transition: transform 0.18s ease;
+      }
+
+      .switch input:checked + .switch-slider {
+        background: linear-gradient(180deg, #7f8cff 0%, #6171ff 100%);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .switch input:checked + .switch-slider::before {
+        transform: translateX(22px);
+      }
+
+      .speed-layout {
+        display: grid;
+        gap: 14px;
+      }
+
+      .speed-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .speed-value {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 68px;
+        height: 36px;
+        padding: 0 12px;
+        border-radius: 10px;
+        border: 1px solid var(--border-strong);
+        background: rgba(255, 255, 255, 0.06);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .speed-controls {
+        display: grid;
+        grid-template-columns: 1fr 92px;
+        gap: 12px;
+        align-items: center;
+      }
+
+      input[type="range"] {
+        width: 100%;
+        margin: 0;
+        appearance: none;
+        background: transparent;
+      }
+
+      input[type="range"]::-webkit-slider-runnable-track {
+        height: 6px;
+        border-radius: 999px;
+        background: var(--track);
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        margin-top: -7px;
+        border: 2px solid rgba(74, 86, 190, 0.9);
+        border-radius: 50%;
+        background: var(--thumb);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+      }
+
+      input[type="range"]::-moz-range-track {
+        height: 6px;
+        border-radius: 999px;
+        background: var(--track);
+      }
+
+      input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border: 2px solid rgba(74, 86, 190, 0.9);
+        border-radius: 50%;
+        background: var(--thumb);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+      }
+
+      input[type="number"] {
+        width: 100%;
+        height: 40px;
+        border: 1px solid var(--border-strong);
+        border-radius: 10px;
+        padding: 0 12px;
+        font-size: 14px;
+        font-weight: 600;
+        background: rgba(18, 24, 37, 0.72);
+        color: var(--text);
+        outline: none;
+      }
+
+      input[type="number"]:focus {
+        border-color: rgba(150, 160, 255, 0.65);
+        box-shadow: 0 0 0 3px rgba(110, 125, 255, 0.18);
+      }
+
+      .range-scale {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        color: var(--soft);
+        font-size: 12px;
+        padding-top: 2px;
+      }
+
+      .status {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 48px;
+        padding: 12px 16px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background: rgba(255, 255, 255, 0.035);
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .status-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--success);
+        box-shadow: 0 0 0 6px rgba(159, 211, 167, 0.12);
+        flex: 0 0 auto;
+      }
+
+      .status.is-error .status-dot {
+        background: #ff8f8f;
+        box-shadow: 0 0 0 6px rgba(255, 143, 143, 0.12);
+      }
+
+      .status.is-busy .status-dot {
+        background: #ffd27a;
+        box-shadow: 0 0 0 6px rgba(255, 210, 122, 0.12);
+      }
+
+      .meta-note {
+        color: var(--soft);
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      @media (max-width: 720px) {
+        .settings-shell {
+          padding: 12px;
+        }
+
+        .page-header h1 {
+          font-size: 24px;
+        }
+
+        .setting-row {
+          align-items: start;
+        }
+
+        .speed-controls {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="settings-shell">
+      <div class="settings-page">
+        <header class="page-header">
+          <div>
+            <h1>Aktionen-Einstellungen</h1>
+            <p>
+              Bewegung und Teleport-Verhalten fuer deine Aktionen in der Welt.
+            </p>
+          </div>
+        </header>
+
+        <section class="section">
+          <div class="section-title">Bewegung</div>
+          <div class="section-body">
+            <article class="setting-card">
+              <div class="setting-row">
+                <div class="setting-copy">
+                  <h2 class="setting-label">
+                    Teleport standardmaessig verwenden
+                  </h2>
+                  <p class="setting-description">
+                    Wenn aktiv, teleportieren Action-Buttons direkt statt den
+                    Avatar laufen zu lassen.
+                  </p>
+                </div>
+
+                <label
+                  class="switch"
+                  aria-label="Teleport-Modus standardmaessig aktivieren"
+                >
+                  <input id="teleportMode" type="checkbox" />
+                  <span class="switch-slider"></span>
+                </label>
+              </div>
+            </article>
+
+            <article class="setting-card">
+              <div class="speed-layout">
+                <div class="speed-head">
+                  <div class="setting-copy">
+                    <h2 class="setting-label">Laufgeschwindigkeit</h2>
+                    <p class="setting-description">
+                      Wird fuer moveTo verwendet, wenn Teleport deaktiviert ist.
+                    </p>
+                  </div>
+                  <div class="speed-value">
+                    <span id="speedValueLabel">20</span>
+                  </div>
+                </div>
+
+                <div class="speed-controls">
+                  <input
+                    id="speedRange"
+                    type="range"
+                    min="5"
+                    max="60"
+                    step="1"
+                  />
+                  <input
+                    id="speedNumber"
+                    type="number"
+                    min="5"
+                    max="60"
+                    step="1"
+                  />
+                </div>
+
+                <div class="range-scale" aria-hidden="true">
+                  <span>Langsam</span>
+                  <span>Standard</span>
+                  <span>Schnell</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <div
+          id="statusBox"
+          class="status is-busy"
+          role="status"
+          aria-live="polite"
+        >
+          <span class="status-dot"></span>
+          <span id="statusText">Initialisiere Einstellungen...</span>
+        </div>
+
+        <div class="meta-note">
+          Die Werte werden persistent im World-State gespeichert.
+        </div>
+      </div>
+    </main>
+
+    <script src="https://play.workadventu.re/iframe_api.js"></script>
+    <script>
+      const TELEPORT_MODE_STATE_KEY = "travelTeleportModeEnabled";
+      const MOVE_SPEED_STATE_KEY = "travelMoveSpeed";
+
+      const teleportModeInput = document.getElementById("teleportMode");
+      const speedRangeInput = document.getElementById("speedRange");
+      const speedNumberInput = document.getElementById("speedNumber");
+      const speedValueLabel = document.getElementById("speedValueLabel");
+      const statusBox = document.getElementById("statusBox");
+      const statusText = document.getElementById("statusText");
+
+      function setStatus(message, type = "success") {
+        statusText.textContent = message;
+        statusBox.classList.remove("is-error", "is-busy");
+
+        if (type === "error") {
+          statusBox.classList.add("is-error");
+          return;
+        }
+
+        if (type === "busy") {
+          statusBox.classList.add("is-busy");
+        }
+      }
+
+      function clampSpeed(value) {
+        if (!Number.isFinite(value)) {
+          return 20;
+        }
+        return Math.min(60, Math.max(5, Math.round(value)));
+      }
+
+      function syncSpeedUI(value) {
+        const moveSpeed = clampSpeed(Number(value));
+        speedRangeInput.value = String(moveSpeed);
+        speedNumberInput.value = String(moveSpeed);
+        speedValueLabel.textContent = String(moveSpeed);
+        return moveSpeed;
+      }
+
+      async function applySpeedValue(rawValue) {
+        const moveSpeed = syncSpeedUI(rawValue);
+
+        await WA.player.state.saveVariable(MOVE_SPEED_STATE_KEY, moveSpeed, {
+          persist: true,
+          scope: "world",
+        });
+
+        setStatus(`Gespeichert: Laufgeschwindigkeit ${moveSpeed}`);
+      }
+
+      if (!window.WA) {
+        setStatus("WA API nicht verfuegbar. Seite neu laden.", "error");
+        throw new Error("WA API unavailable in settings iframe");
+      }
+
+      WA.onInit()
+        .then(() => {
+          setStatus("WA API bereit. Lade Einstellungen...", "busy");
+
+          const savedTeleport = WA.player.state.loadVariable(
+            TELEPORT_MODE_STATE_KEY,
+          );
+          const savedMoveSpeed =
+            WA.player.state.loadVariable(MOVE_SPEED_STATE_KEY);
+
+          teleportModeInput.checked =
+            typeof savedTeleport === "boolean" ? savedTeleport : false;
+
+          const initialSpeed =
+            typeof savedMoveSpeed === "number"
+              ? clampSpeed(savedMoveSpeed)
+              : 20;
+
+          syncSpeedUI(initialSpeed);
+          setStatus("Einstellungen geladen.");
+
+          teleportModeInput.addEventListener("change", async () => {
+            try {
+              await WA.player.state.saveVariable(
+                TELEPORT_MODE_STATE_KEY,
+                teleportModeInput.checked,
+                {
+                  persist: true,
+                  scope: "world",
+                },
+              );
+
+              setStatus(
+                `Gespeichert: Teleport ${teleportModeInput.checked ? "AN" : "AUS"}`,
+              );
+            } catch (error) {
+              console.error(error);
+              setStatus(`Fehler beim Speichern: ${String(error)}`, "error");
+            }
+          });
+
+          speedRangeInput.addEventListener("input", () => {
+            syncSpeedUI(speedRangeInput.value);
+          });
+
+          speedRangeInput.addEventListener("change", () => {
+            applySpeedValue(speedRangeInput.value).catch((error) => {
+              console.error(error);
+              setStatus(`Fehler beim Speichern: ${String(error)}`, "error");
+            });
+          });
+
+          speedNumberInput.addEventListener("input", () => {
+            syncSpeedUI(speedNumberInput.value);
+          });
+
+          speedNumberInput.addEventListener("change", () => {
+            applySpeedValue(speedNumberInput.value).catch((error) => {
+              console.error(error);
+              setStatus(`Fehler beim Speichern: ${String(error)}`, "error");
+            });
+          });
+        })
+        .catch((error) => {
+          console.error(error);
+          setStatus(`Fehler: ${String(error)}`, "error");
+        });
+    </script>
+  </body>
+</html>
