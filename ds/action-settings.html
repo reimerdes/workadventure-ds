@@ -123,6 +123,31 @@
         border-radius: var(--radius-lg);
       }
 
+      .action-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .action-item-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .action-icon {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+        image-rendering: pixelated;
+      }
+
+      .action-name {
+        font-size: 14px;
+        color: var(--text);
+      }
+
       .setting-row {
         display: flex;
         align-items: center;
@@ -359,7 +384,7 @@
           <div>
             <h1>Aktionen-Einstellungen</h1>
             <p>
-              Bewegung und Teleport-Verhalten fuer deine Aktionen in der Welt.
+              Bewegung und Teleport-Verhalten für deine Aktionen in der Welt.
             </p>
           </div>
         </header>
@@ -371,7 +396,7 @@
               <div class="setting-row">
                 <div class="setting-copy">
                   <h2 class="setting-label">
-                    Teleport standardmaessig verwenden
+                    Teleport standardmäßig verwenden
                   </h2>
                   <p class="setting-description">
                     Wenn aktiv, teleportieren Action-Buttons direkt statt den
@@ -381,7 +406,7 @@
 
                 <label
                   class="switch"
-                  aria-label="Teleport-Modus standardmaessig aktivieren"
+                  aria-label="Teleport-Modus standardmäßig aktivieren"
                 >
                   <input id="teleportMode" type="checkbox" />
                   <span class="switch-slider"></span>
@@ -395,7 +420,7 @@
                   <div class="setting-copy">
                     <h2 class="setting-label">Laufgeschwindigkeit</h2>
                     <p class="setting-description">
-                      Wird fuer moveTo verwendet, wenn Teleport deaktiviert ist.
+                      Wird für moveTo verwendet, wenn Teleport deaktiviert ist.
                     </p>
                   </div>
                   <div class="speed-value">
@@ -430,6 +455,92 @@
           </div>
         </section>
 
+        <section class="section">
+          <div class="section-title">Sichtbare Aktionen</div>
+          <div class="section-body">
+            <article class="setting-card action-item">
+              <div class="action-item-left">
+                <img src="pause.png" alt="Pause" class="action-icon" />
+                <span class="action-name">Pause</span>
+              </div>
+              <label class="switch" aria-label="Pause-Aktion anzeigen">
+                <input id="actionPauseVisible" type="checkbox" />
+                <span class="switch-slider"></span>
+              </label>
+            </article>
+
+            <article class="setting-card action-item">
+              <div class="action-item-left">
+                <img src="call.png" alt="Im Gespräch" class="action-icon" />
+                <span class="action-name">Im Gespräch</span>
+              </div>
+              <label class="switch" aria-label="Im-Gespräch-Aktion anzeigen">
+                <input id="actionCustomerCallVisible" type="checkbox" />
+                <span class="switch-slider"></span>
+              </label>
+            </article>
+
+            <article class="setting-card action-item">
+              <div class="action-item-left">
+                <img src="meeting.png" alt="Meeting" class="action-icon" />
+                <span class="action-name">Meeting</span>
+              </div>
+              <label class="switch" aria-label="Meeting-Aktion anzeigen">
+                <input id="actionMeetingVisible" type="checkbox" />
+                <span class="switch-slider"></span>
+              </label>
+            </article>
+
+            <article class="setting-card action-item">
+              <div class="action-item-left">
+                <img src="emergency.png" alt="Emergency" class="action-icon" />
+                <span class="action-name">Emergency</span>
+              </div>
+              <label class="switch" aria-label="Emergency-Aktion anzeigen">
+                <input id="actionEmergencyVisible" type="checkbox" />
+                <span class="switch-slider"></span>
+              </label>
+            </article>
+
+            <article class="setting-card action-item">
+              <div class="action-item-left">
+                <img
+                  src="greenhouse.png"
+                  alt="Gewächshaus"
+                  class="action-icon"
+                />
+                <span class="action-name">Gewächshaus</span>
+              </div>
+              <label class="switch" aria-label="Gewächshaus-Aktion anzeigen">
+                <input id="actionGreenhouseVisible" type="checkbox" />
+                <span class="switch-slider"></span>
+              </label>
+            </article>
+
+            <article class="setting-card action-item">
+              <div class="action-item-left">
+                <img src="lounge.png" alt="Lounge" class="action-icon" />
+                <span class="action-name">Lounge</span>
+              </div>
+              <label class="switch" aria-label="Lounge-Aktion anzeigen">
+                <input id="actionLoungeVisible" type="checkbox" />
+                <span class="switch-slider"></span>
+              </label>
+            </article>
+
+            <article class="setting-card action-item">
+              <div class="action-item-left">
+                <img src="pool.png" alt="Pool" class="action-icon" />
+                <span class="action-name">Pool</span>
+              </div>
+              <label class="switch" aria-label="Pool-Aktion anzeigen">
+                <input id="actionPoolVisible" type="checkbox" />
+                <span class="switch-slider"></span>
+              </label>
+            </article>
+          </div>
+        </section>
+
         <div
           id="statusBox"
           class="status is-busy"
@@ -450,11 +561,39 @@
     <script>
       const TELEPORT_MODE_STATE_KEY = "travelTeleportModeEnabled";
       const MOVE_SPEED_STATE_KEY = "travelMoveSpeed";
+      const ACTION_VISIBILITY_STATE_KEYS = {
+        pause: "actionVisiblePause",
+        customerCall: "actionVisibleCustomerCall",
+        meeting: "actionVisibleMeeting",
+        emergency: "actionVisibleEmergency",
+        greenhouse: "actionVisibleGreenhouse",
+        lounge: "actionVisibleLounge",
+        pool: "actionVisiblePool",
+      };
 
       const teleportModeInput = document.getElementById("teleportMode");
       const speedRangeInput = document.getElementById("speedRange");
       const speedNumberInput = document.getElementById("speedNumber");
       const speedValueLabel = document.getElementById("speedValueLabel");
+      const actionPauseVisibleInput =
+        document.getElementById("actionPauseVisible");
+      const actionCustomerCallVisibleInput = document.getElementById(
+        "actionCustomerCallVisible",
+      );
+      const actionMeetingVisibleInput = document.getElementById(
+        "actionMeetingVisible",
+      );
+      const actionEmergencyVisibleInput = document.getElementById(
+        "actionEmergencyVisible",
+      );
+      const actionGreenhouseVisibleInput = document.getElementById(
+        "actionGreenhouseVisible",
+      );
+      const actionLoungeVisibleInput = document.getElementById(
+        "actionLoungeVisible",
+      );
+      const actionPoolVisibleInput =
+        document.getElementById("actionPoolVisible");
       const statusBox = document.getElementById("statusBox");
       const statusText = document.getElementById("statusText");
 
@@ -498,8 +637,17 @@
         setStatus(`Gespeichert: Laufgeschwindigkeit ${moveSpeed}`);
       }
 
+      async function saveActionVisibility(stateKey, enabled, label) {
+        await WA.player.state.saveVariable(stateKey, enabled, {
+          persist: true,
+          scope: "world",
+        });
+
+        setStatus(`Gespeichert: ${label} ${enabled ? "AN" : "AUS"}`);
+      }
+
       if (!window.WA) {
-        setStatus("WA API nicht verfuegbar. Seite neu laden.", "error");
+        setStatus("WA API nicht verfügbar. Seite neu laden.", "error");
         throw new Error("WA API unavailable in settings iframe");
       }
 
@@ -522,6 +670,59 @@
               : 20;
 
           syncSpeedUI(initialSpeed);
+
+          const savedPauseVisible = WA.player.state.loadVariable(
+            ACTION_VISIBILITY_STATE_KEYS.pause,
+          );
+          actionPauseVisibleInput.checked =
+            typeof savedPauseVisible === "boolean" ? savedPauseVisible : true;
+
+          const savedCustomerCallVisible = WA.player.state.loadVariable(
+            ACTION_VISIBILITY_STATE_KEYS.customerCall,
+          );
+          actionCustomerCallVisibleInput.checked =
+            typeof savedCustomerCallVisible === "boolean"
+              ? savedCustomerCallVisible
+              : true;
+
+          const savedMeetingVisible = WA.player.state.loadVariable(
+            ACTION_VISIBILITY_STATE_KEYS.meeting,
+          );
+          actionMeetingVisibleInput.checked =
+            typeof savedMeetingVisible === "boolean"
+              ? savedMeetingVisible
+              : true;
+
+          const savedEmergencyVisible = WA.player.state.loadVariable(
+            ACTION_VISIBILITY_STATE_KEYS.emergency,
+          );
+          actionEmergencyVisibleInput.checked =
+            typeof savedEmergencyVisible === "boolean"
+              ? savedEmergencyVisible
+              : false;
+
+          const savedGreenhouseVisible = WA.player.state.loadVariable(
+            ACTION_VISIBILITY_STATE_KEYS.greenhouse,
+          );
+          actionGreenhouseVisibleInput.checked =
+            typeof savedGreenhouseVisible === "boolean"
+              ? savedGreenhouseVisible
+              : false;
+
+          const savedLoungeVisible = WA.player.state.loadVariable(
+            ACTION_VISIBILITY_STATE_KEYS.lounge,
+          );
+          actionLoungeVisibleInput.checked =
+            typeof savedLoungeVisible === "boolean"
+              ? savedLoungeVisible
+              : false;
+
+          const savedPoolVisible = WA.player.state.loadVariable(
+            ACTION_VISIBILITY_STATE_KEYS.pool,
+          );
+          actionPoolVisibleInput.checked =
+            typeof savedPoolVisible === "boolean" ? savedPoolVisible : false;
+
           setStatus("Einstellungen geladen.");
 
           teleportModeInput.addEventListener("change", async () => {
@@ -561,6 +762,83 @@
 
           speedNumberInput.addEventListener("change", () => {
             applySpeedValue(speedNumberInput.value).catch((error) => {
+              console.error(error);
+              setStatus(`Fehler beim Speichern: ${String(error)}`, "error");
+            });
+          });
+
+          actionPauseVisibleInput.addEventListener("change", () => {
+            saveActionVisibility(
+              ACTION_VISIBILITY_STATE_KEYS.pause,
+              actionPauseVisibleInput.checked,
+              "Pause",
+            ).catch((error) => {
+              console.error(error);
+              setStatus(`Fehler beim Speichern: ${String(error)}`, "error");
+            });
+          });
+
+          actionCustomerCallVisibleInput.addEventListener("change", () => {
+            saveActionVisibility(
+              ACTION_VISIBILITY_STATE_KEYS.customerCall,
+              actionCustomerCallVisibleInput.checked,
+              "Im Gespräch",
+            ).catch((error) => {
+              console.error(error);
+              setStatus(`Fehler beim Speichern: ${String(error)}`, "error");
+            });
+          });
+
+          actionMeetingVisibleInput.addEventListener("change", () => {
+            saveActionVisibility(
+              ACTION_VISIBILITY_STATE_KEYS.meeting,
+              actionMeetingVisibleInput.checked,
+              "Meeting",
+            ).catch((error) => {
+              console.error(error);
+              setStatus(`Fehler beim Speichern: ${String(error)}`, "error");
+            });
+          });
+
+          actionEmergencyVisibleInput.addEventListener("change", () => {
+            saveActionVisibility(
+              ACTION_VISIBILITY_STATE_KEYS.emergency,
+              actionEmergencyVisibleInput.checked,
+              "Emergency",
+            ).catch((error) => {
+              console.error(error);
+              setStatus(`Fehler beim Speichern: ${String(error)}`, "error");
+            });
+          });
+
+          actionGreenhouseVisibleInput.addEventListener("change", () => {
+            saveActionVisibility(
+              ACTION_VISIBILITY_STATE_KEYS.greenhouse,
+              actionGreenhouseVisibleInput.checked,
+              "Gewächshaus",
+            ).catch((error) => {
+              console.error(error);
+              setStatus(`Fehler beim Speichern: ${String(error)}`, "error");
+            });
+          });
+
+          actionLoungeVisibleInput.addEventListener("change", () => {
+            saveActionVisibility(
+              ACTION_VISIBILITY_STATE_KEYS.lounge,
+              actionLoungeVisibleInput.checked,
+              "Lounge",
+            ).catch((error) => {
+              console.error(error);
+              setStatus(`Fehler beim Speichern: ${String(error)}`, "error");
+            });
+          });
+
+          actionPoolVisibleInput.addEventListener("change", () => {
+            saveActionVisibility(
+              ACTION_VISIBILITY_STATE_KEYS.pool,
+              actionPoolVisibleInput.checked,
+              "Pool",
+            ).catch((error) => {
               console.error(error);
               setStatus(`Fehler beim Speichern: ${String(error)}`, "error");
             });
