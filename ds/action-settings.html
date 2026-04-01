@@ -432,15 +432,15 @@
                   <input
                     id="speedRange"
                     type="range"
-                    min="5"
-                    max="60"
+                    min="1"
+                    max="100"
                     step="1"
                   />
                   <input
                     id="speedNumber"
                     type="number"
-                    min="5"
-                    max="60"
+                    min="1"
+                    max="100"
                     step="1"
                   />
                 </div>
@@ -538,6 +538,17 @@
                 <span class="switch-slider"></span>
               </label>
             </article>
+
+            <article class="setting-card action-item">
+              <div class="action-item-left">
+                <img src="class.png" alt="Klassenzimmer" class="action-icon" />
+                <span class="action-name">Klassenzimmer</span>
+              </div>
+              <label class="switch" aria-label="Klassenzimmer-Aktion anzeigen">
+                <input id="actionClassRoomVisible" type="checkbox" />
+                <span class="switch-slider"></span>
+              </label>
+            </article>
           </div>
         </section>
 
@@ -565,6 +576,7 @@
         pause: "actionVisiblePause",
         customerCall: "actionVisibleCustomerCall",
         meeting: "actionVisibleMeeting",
+        classRoom: "actionVisibleClassRoom",
         emergency: "actionVisibleEmergency",
         greenhouse: "actionVisibleGreenhouse",
         lounge: "actionVisibleLounge",
@@ -582,6 +594,9 @@
       );
       const actionMeetingVisibleInput = document.getElementById(
         "actionMeetingVisible",
+      );
+      const actionClassRoomVisibleInput = document.getElementById(
+        "actionClassRoomVisible",
       );
       const actionEmergencyVisibleInput = document.getElementById(
         "actionEmergencyVisible",
@@ -615,7 +630,7 @@
         if (!Number.isFinite(value)) {
           return 20;
         }
-        return Math.min(60, Math.max(5, Math.round(value)));
+        return Math.min(100, Math.max(1, Math.round(value)));
       }
 
       function syncSpeedUI(value) {
@@ -692,6 +707,14 @@
             typeof savedMeetingVisible === "boolean"
               ? savedMeetingVisible
               : true;
+
+          const savedClassRoomVisible = WA.player.state.loadVariable(
+            ACTION_VISIBILITY_STATE_KEYS.classRoom,
+          );
+          actionClassRoomVisibleInput.checked =
+            typeof savedClassRoomVisible === "boolean"
+              ? savedClassRoomVisible
+              : false;
 
           const savedEmergencyVisible = WA.player.state.loadVariable(
             ACTION_VISIBILITY_STATE_KEYS.emergency,
@@ -794,6 +817,17 @@
               ACTION_VISIBILITY_STATE_KEYS.meeting,
               actionMeetingVisibleInput.checked,
               "Meeting",
+            ).catch((error) => {
+              console.error(error);
+              setStatus(`Fehler beim Speichern: ${String(error)}`, "error");
+            });
+          });
+
+          actionClassRoomVisibleInput.addEventListener("change", () => {
+            saveActionVisibility(
+              ACTION_VISIBILITY_STATE_KEYS.classRoom,
+              actionClassRoomVisibleInput.checked,
+              "Klassenzimmer",
             ).catch((error) => {
               console.error(error);
               setStatus(`Fehler beim Speichern: ${String(error)}`, "error");
