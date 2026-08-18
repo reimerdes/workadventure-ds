@@ -12,12 +12,16 @@ let optimizerOptions: OptimizeOptions = {
 
 if (process.env.TILESET_OPTIMIZATION &&
     process.env.TILESET_OPTIMIZATION === 'true') {
-  const qualityMin = process.env.TILESET_OPTIMIZATION_QUALITY_MIN ?
-      parseInt(process.env.TILESET_OPTIMIZATION_QUALITY_MIN) :
-      0.9;
-  const qualityMax = process.env.TILESET_OPTIMIZATION_QUALITY_MAX ?
-      parseInt(process.env.TILESET_OPTIMIZATION_QUALITY_MAX) :
-      1;
+  const qualityMin = Number.parseFloat(
+      process.env.TILESET_OPTIMIZATION_QUALITY_MIN ?? '0.9');
+  const qualityMax = Number.parseFloat(
+      process.env.TILESET_OPTIMIZATION_QUALITY_MAX ?? '1');
+
+  if (!Number.isFinite(qualityMin) || !Number.isFinite(qualityMax) ||
+      qualityMin < 0 || qualityMax > 1 || qualityMin > qualityMax) {
+    throw new Error(
+        'Tileset optimization quality must satisfy 0 <= min <= max <= 1');
+  }
 
   optimizerOptions.output = {
     tileset: {
