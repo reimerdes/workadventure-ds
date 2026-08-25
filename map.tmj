@@ -9088,6 +9088,19 @@
          "tilecount":100,
          "tileheight":32,
          "tilewidth":32
+        }, 
+        {
+         "columns":64,
+         "firstgid":135326,
+         "image":"src\/assets\/ds\/ds-interieur.png",
+         "imageheight":1280,
+         "imagewidth":2048,
+         "margin":0,
+         "name":"ds-interieur",
+         "spacing":0,
+         "tilecount":2560,
+         "tileheight":32,
+         "tilewidth":32
         }],
  "tilewidth":32,
  "type":"map",
