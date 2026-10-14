@@ -44,6 +44,13 @@ export default defineConfig({
     },
   },
   plugins: [...getMapsOptimizers(maps, optimizerOptions)],
+  preview: {
+    allowedHosts: ['.loca.lt', '.trycloudflare.com'],
+    cors: true,
+    headers: {
+      'Cache-Control': 'no-store',
+    },
+  },
   server: {
     host: 'localhost',
     allowedHosts: ['.loca.lt', '.trycloudflare.com'],
