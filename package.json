@@ -14,8 +14,11 @@
     "serve:dist": "npx --yes serve dist -l 4173 -C --no-etag --no-port-switching",
     "tunnel:dist": "npx --yes localtunnel --port 4173",
     "tunnel:dist:keepalive": "while true; do npm run tunnel:dist; echo '[tunnel] disconnected, retry in 2s'; sleep 2; done",
+    "tunnel:cloudflare": "cloudflared tunnel --url http://127.0.0.1:4173",
     "start:dist": "npm run build && concurrently -k -n serve,tunnel -c blue,magenta \"npm run serve:dist\" \"npm run tunnel:dist\"",
-    "start:live": "NODE_OPTIONS='' concurrently -k -n dev,tunnel -c cyan,magenta \"VITE_OPEN=false NODE_OPTIONS='' vite --host 0.0.0.0 --port 4173 --strictPort\" \"NODE_OPTIONS='' npm run tunnel:dist:keepalive\""
+    "start:dist:cloudflare": "NODE_OPTIONS='' npm run build && NODE_OPTIONS='' concurrently -k -n serve,tunnel -c blue,magenta \"NODE_OPTIONS='' npm run serve:dist\" \"NODE_OPTIONS='' npm run tunnel:cloudflare\"",
+    "start:live": "NODE_OPTIONS='' concurrently -k -n dev,tunnel -c cyan,magenta \"VITE_OPEN=false NODE_OPTIONS='' vite --host 0.0.0.0 --port 4173 --strictPort\" \"NODE_OPTIONS='' npm run tunnel:cloudflare\"",
+    "start:live:localtunnel": "NODE_OPTIONS='' concurrently -k -n dev,tunnel -c cyan,magenta \"VITE_OPEN=false NODE_OPTIONS='' vite --host 0.0.0.0 --port 4173 --strictPort\" \"NODE_OPTIONS='' npm run tunnel:dist:keepalive\""
   },
   "devDependencies": {
     "@types/node": "^24.10.1",

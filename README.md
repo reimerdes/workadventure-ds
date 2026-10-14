@@ -19,12 +19,26 @@ npm run start
 
 You can now use these shortcuts for WorkAdventure publishing/testing workflows:
 
+Live mode requires [cloudflared](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/downloads/) on your `PATH`.
+It starts a Cloudflare Quick Tunnel without an account or domain. The printed
+`https://<random-name>.trycloudflare.com` URL is public and changes on each start.
+Use that hostname with `/map.tmj` in WorkAdventure. Stop the process to close access.
+
 ```shell
 # Build once, then start static server + tunnel together
 npm run start:dist
 
-# Live mode: no rebuild needed after each change (auto update) + tunnel
+# Optimized build + Cloudflare tunnel (small texture atlases instead of source tilesets)
+npm run start:dist:cloudflare
+
+# Live mode: no rebuild needed after each change (auto update) + Cloudflare tunnel
 npm run start:live
+
+# Alternative live mode using Localtunnel
+npm run start:live:localtunnel
+
+# Cloudflare tunnel only, when a server is already running on port 4173
+npm run tunnel:cloudflare
 ```
 
 If you use VS Code, open Run and Debug and select:
