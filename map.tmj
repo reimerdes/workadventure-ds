@@ -9350,6 +9350,19 @@
          "tilecount":3840,
          "tileheight":32,
          "tilewidth":32
+        }, 
+        {
+         "columns":13,
+         "firstgid":149902,
+         "image":"src\/assets\/ds\/autumn-leaves.png",
+         "imageheight":288,
+         "imagewidth":416,
+         "margin":0,
+         "name":"autumn-leaves",
+         "spacing":0,
+         "tilecount":117,
+         "tileheight":32,
+         "tilewidth":32
         }],
  "tilewidth":32,
  "type":"map",
