@@ -12,10 +12,10 @@ let optimizerOptions: OptimizeOptions = {
 
 if (process.env.TILESET_OPTIMIZATION &&
     process.env.TILESET_OPTIMIZATION === 'true') {
-  const qualityMin = Number.parseFloat(
-      process.env.TILESET_OPTIMIZATION_QUALITY_MIN ?? '0.9');
-  const qualityMax = Number.parseFloat(
-      process.env.TILESET_OPTIMIZATION_QUALITY_MAX ?? '1');
+  const qualityMin =
+      Number.parseFloat(process.env.TILESET_OPTIMIZATION_QUALITY_MIN ?? '0.9');
+  const qualityMax =
+      Number.parseFloat(process.env.TILESET_OPTIMIZATION_QUALITY_MAX ?? '1');
 
   if (!Number.isFinite(qualityMin) || !Number.isFinite(qualityMax) ||
       qualityMin < 0 || qualityMax > 1 || qualityMin > qualityMax) {
@@ -44,9 +44,16 @@ export default defineConfig({
     },
   },
   plugins: [...getMapsOptimizers(maps, optimizerOptions)],
+  preview: {
+    allowedHosts: ['.loca.lt', '.trycloudflare.com'],
+    cors: true,
+    headers: {
+      'Cache-Control': 'no-store',
+    },
+  },
   server: {
     host: 'localhost',
-    allowedHosts: ['.loca.lt'],
+    allowedHosts: ['.loca.lt', '.trycloudflare.com'],
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',

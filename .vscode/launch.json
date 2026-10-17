@@ -19,7 +19,7 @@
             "command": "npm run start:live",
             "serverReadyAction": {
                 "action": "openExternally",
-                "pattern": "[Yy]our url is:\\s+(https?://\\S+)",
+                "pattern": "(https://[a-z0-9-]+\\.trycloudflare\\.com)",
                 "uriFormat": "%s"
             }
         }
