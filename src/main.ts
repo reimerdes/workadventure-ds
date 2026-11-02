@@ -7,6 +7,7 @@ import {Night} from './night.js';
 WA.onInit()
     .then(() => {
       const userTag = WA.player.tags;
+      console.log('Meine WorkAdventure-Tags:', userTag);
 
       if (!WA.player.isLogged) {
         WA.ui.banner.openBanner({

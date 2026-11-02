@@ -717,7 +717,7 @@
                         {
                          "name":"jitsiRoomAdminTag",
                          "type":"string",
-                         "value":"member"
+                         "value":"speaker"
                         }, 
                         {
                          "name":"jitsiTrigger",
@@ -8581,137 +8581,6 @@
          "opacity":1,
          "type":"group",
          "visible":false,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "draworder":"topdown",
-         "id":259,
-         "name":"hedgehog-child-hints",
-         "objects":[
-                {
-                 "height":88,
-                 "id":104,
-                 "name":"hedgehog-child-north-rabbit",
-                 "opacity":1,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":240,
-                 "x":1256,
-                 "y":72
-                }, 
-                {
-                 "height":88,
-                 "id":105,
-                 "name":"hedgehog-child-north-basket",
-                 "opacity":1,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":240,
-                 "x":1288,
-                 "y":72
-                }, 
-                {
-                 "height":88,
-                 "id":106,
-                 "name":"hedgehog-child-west-magnifier",
-                 "opacity":1,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":240,
-                 "x":488,
-                 "y":96
-                }, 
-                {
-                 "height":88,
-                 "id":107,
-                 "name":"hedgehog-child-east-umbrella",
-                 "opacity":1,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":240,
-                 "x":1992,
-                 "y":384
-                }, 
-                {
-                 "height":88,
-                 "id":108,
-                 "name":"hedgehog-child-east-rabbit",
-                 "opacity":1,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":240,
-                 "x":1544,
-                 "y":1344
-                }, 
-                {
-                 "height":88,
-                 "id":109,
-                 "name":"hedgehog-child-west-umbrella",
-                 "opacity":1,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":240,
-                 "x":616,
-                 "y":1504
-                }, 
-                {
-                 "height":88,
-                 "id":110,
-                 "name":"hedgehog-child-south-rabbit",
-                 "opacity":1,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":240,
-                 "x":1256,
-                 "y":1536
-                }, 
-                {
-                 "height":88,
-                 "id":111,
-                 "name":"hedgehog-child-south-cat",
-                 "opacity":1,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":240,
-                 "x":1352,
-                 "y":1536
-                }, 
-                {
-                 "height":88,
-                 "id":112,
-                 "name":"hedgehog-child-south-kite",
-                 "opacity":1,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":240,
-                 "x":1736,
-                 "y":1728
-                }, 
-                {
-                 "height":88,
-                 "id":113,
-                 "name":"hedgehog-child-south-leaves",
-                 "opacity":1,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":240,
-                 "x":1160,
-                 "y":1792
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
          "x":0,
          "y":0
         }],
